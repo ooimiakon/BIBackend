@@ -3,6 +3,8 @@ package org.swzn.bibackend.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.swzn.bibackend.entity.Click;
 
+import java.util.Date;
+
 
 /**
 * @author HDM
@@ -11,6 +13,5 @@ import org.swzn.bibackend.entity.Click;
 * @Entity org.swzn.bibackend.entity.Click
 */
 public interface ClickMapper extends BaseMapper<Click> {
-
 
 }
