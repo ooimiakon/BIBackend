@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.swzn.bibackend.mapper.NewsMapper">
+
+    <resultMap id="BaseResultMap" type="org.swzn.bibackend.entity.News">
+            <result property="newsId" column="News_ID" jdbcType="VARCHAR"/>
+            <result property="category" column="Category" jdbcType="VARCHAR"/>
+            <result property="topic" column="Topic" jdbcType="VARCHAR"/>
+            <result property="headline" column="Headline" jdbcType="VARCHAR"/>
+            <result property="newsBody" column="News_Body" jdbcType="VARCHAR"/>
+            <result property="cutnum" column="CutNum" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        News_ID,Category,Topic,
+        Headline,News_Body,CutNum
+    </sql>
+</mapper>
