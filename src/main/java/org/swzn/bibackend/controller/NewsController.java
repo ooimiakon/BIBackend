@@ -15,8 +15,7 @@ import org.swzn.bibackend.service.NewsService;
 import org.swzn.bibackend.utils.Result;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @CrossOrigin("*")
 @Slf4j
@@ -37,6 +36,7 @@ public class NewsController {
     public String test(){
         return "hello!";
     }
+
     @GetMapping("/GetNewsById")
     public Result GetNewsById(String id){
         Result result=new Result();
@@ -49,6 +49,53 @@ public class NewsController {
             temp.add(n.getClicknews());
         }
         result.data.put("id",temp);
+        return result;
+    }
+
+
+    @GetMapping("/Recommend")
+    public Result getNewsByUserAndDate(String userId, String date) {
+        Result result = new Result();
+
+        // 查询用户当天点击过的所有新闻
+        QueryWrapper<Click> clickWrapper = new QueryWrapper<>();
+        clickWrapper.eq("UserId", userId)
+                .eq("ClickTime", date);
+        List<Click> clickList = clickMapper.selectList(clickWrapper);
+
+        // 统计每个Category的点击量
+        Map<String, Integer> categoryCounts = new HashMap<>();
+        for (Click click : clickList) {
+            String category = click.getClicknews();
+            categoryCounts.put(category, categoryCounts.getOrDefault(category, 0) + 1);
+        }
+
+        // 获取点击量最高的Category
+        String maxCategory = null;
+        int maxCount = 0;
+        for (Map.Entry<String, Integer> entry : categoryCounts.entrySet()) {
+            if (entry.getValue() > maxCount) {
+                maxCategory = entry.getKey();
+                maxCount = entry.getValue();
+            }
+        }
+
+        // 检索点击量最高的Category的新闻的标题和内容（随机3条）
+        QueryWrapper<News> newsWrapper = new QueryWrapper<>();
+        newsWrapper.eq("Category", maxCategory)
+                .last("ORDER BY RAND() LIMIT 3");  // 随机排序并限制返回结果为3条记录
+        List<News> newsList = newsMapper.selectList(newsWrapper);
+
+        // 封装结果
+        List<Map<String, Object>> newsData = new ArrayList<>();
+        for (News news : newsList) {
+            Map<String, Object> newsInfo = new HashMap<>();
+            newsInfo.put("title", news.getTitle());
+            newsInfo.put("content", news.getContent());
+            newsData.add(newsInfo);
+        }
+        result.data.put("news", newsData);
+
         return result;
     }
 }

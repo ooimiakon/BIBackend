@@ -46,4 +46,12 @@ public class News implements Serializable {
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
+
+    public Object getTitle() {
+        return headline;
+    }
+
+    public Object getContent() {
+        return newsBody;
+    }
 }

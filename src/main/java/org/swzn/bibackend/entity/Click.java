@@ -1,6 +1,5 @@
 package org.swzn.bibackend.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -18,7 +17,7 @@ public class Click implements Serializable {
     /**
      * 
      */
-    @TableId(type = IdType.AUTO)
+    @TableId
     private Integer clickid;
 
     /**
@@ -35,11 +34,6 @@ public class Click implements Serializable {
      * 
      */
     private Date clicktime;
-
-    /**
-     * 
-     */
-    private Integer dwelltime;
 
     /**
      * 

@@ -6,15 +6,14 @@
 
     <resultMap id="BaseResultMap" type="org.swzn.bibackend.entity.Click">
             <id property="clickid" column="ClickId" jdbcType="INTEGER"/>
-            <result property="userid" column="UserId" jdbcType="VARCHAR"/>
-            <result property="clicknews" column="ClickNews" jdbcType="VARCHAR"/>
+            <result property="userid" column="UserId" jdbcType="CHAR"/>
+            <result property="clicknews" column="ClickNews" jdbcType="CHAR"/>
             <result property="clicktime" column="ClickTime" jdbcType="TIMESTAMP"/>
-            <result property="dwelltime" column="Dwelltime" jdbcType="INTEGER"/>
-            <result property="category" column="Category" jdbcType="VARCHAR"/>
+            <result property="category" column="Category" jdbcType="CHAR"/>
     </resultMap>
 
     <sql id="Base_Column_List">
         ClickId,UserId,ClickNews,
-        ClickTime,Dwelltime,Category
+        ClickTime,Category
     </sql>
 </mapper>
