@@ -9,16 +9,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.swzn.bibackend.entity.Click;
 import org.swzn.bibackend.entity.ClicksInt;
+import org.swzn.bibackend.entity.Dailyclick;
 import org.swzn.bibackend.entity.News;
 import org.swzn.bibackend.mapper.ClickMapper;
 import org.swzn.bibackend.mapper.ClicksIntMapper;
+import org.swzn.bibackend.mapper.DailyclickMapper;
 import org.swzn.bibackend.mapper.NewsMapper;
 import org.swzn.bibackend.service.ClickService;
 import org.swzn.bibackend.service.NewsService;
 import org.swzn.bibackend.utils.Result;
 
+
 import javax.annotation.Resource;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @CrossOrigin("*")
@@ -37,6 +43,8 @@ public class NewsController {
     private ClickMapper clickMapper;
     @Resource
     private ClicksIntMapper clicksIntMapper;
+    @Resource
+    private DailyclickMapper dailyclickMapper;
 
     @GetMapping("/test")
     public String test(){
@@ -94,55 +102,55 @@ public class NewsController {
     }
 
     //推荐新闻
-    @GetMapping("/Recommend")
-    public Result getRecommend(String userId, String date) {
-        Result result = new Result();
-
-        int intdate = convertDateStringToInt(date);
-
-
-        // 查询用户当天点击过的所有新闻
-        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-        clickWrapper.eq("UserId", userId)
-                .between("ClickTime", intstartdate,  intenddate)
-        List<ClicksInt> clickList = clicksIntMapper.selectList(clickWrapper);
-
-        // 统计每个Category的点击量
-        Map<String, Integer> categoryCounts = new HashMap<>();
-        for (ClicksInt click : clickList) {
-            String category = click.getClicknews();
-            categoryCounts.put(category, categoryCounts.getOrDefault(category, 0) + 1);
-        }
-
-        // 获取点击量最高的Category
-        String maxCategory = null;
-        int maxCount = 0;
-        for (Map.Entry<String, Integer> entry : categoryCounts.entrySet()) {
-            if (entry.getValue() > maxCount) {
-                maxCategory = entry.getKey();
-                maxCount = entry.getValue();
-            }
-        }
-
-        // 检索点击量最高的Category的新闻的标题和内容（随机3条）
-        QueryWrapper<News> newsWrapper = new QueryWrapper<>();
-        newsWrapper.eq("Category", maxCategory)
-                .last("ORDER BY RAND()")
-                .last("LIMIT 3");// 随机排序并限制返回结果为3条记录
-        List<News> newsList = newsMapper.selectList(newsWrapper);
-
-        // 封装结果
-        List<Map<String, Object>> newsData = new ArrayList<>();
-        for (News news : newsList) {
-            Map<String, Object> newsInfo = new HashMap<>();
-            newsInfo.put("title", news.getHeadline());
-            newsInfo.put("content", news.getNewsBody());
-            newsData.add(newsInfo);
-        }
-        result.data.put("news", newsData);
-
-        return result;
-    }
+//    @GetMapping("/Recommend")
+//    public Result getRecommend(String userId, String date) {
+//        Result result = new Result();
+//
+//        int intdate = convertDateStringToInt(date);
+//
+//
+//        // 查询用户当天点击过的所有新闻
+//        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//        clickWrapper.eq("UserId", userId)
+//                .between("ClickTime", intstartdate,  intenddate)
+//        List<ClicksInt> clickList = clicksIntMapper.selectList(clickWrapper);
+//
+//        // 统计每个Category的点击量
+//        Map<String, Integer> categoryCounts = new HashMap<>();
+//        for (ClicksInt click : clickList) {
+//            String category = click.getClicknews();
+//            categoryCounts.put(category, categoryCounts.getOrDefault(category, 0) + 1);
+//        }
+//
+//        // 获取点击量最高的Category
+//        String maxCategory = null;
+//        int maxCount = 0;
+//        for (Map.Entry<String, Integer> entry : categoryCounts.entrySet()) {
+//            if (entry.getValue() > maxCount) {
+//                maxCategory = entry.getKey();
+//                maxCount = entry.getValue();
+//            }
+//        }
+//
+//        // 检索点击量最高的Category的新闻的标题和内容（随机3条）
+//        QueryWrapper<News> newsWrapper = new QueryWrapper<>();
+//        newsWrapper.eq("Category", maxCategory)
+//                .last("ORDER BY RAND()")
+//                .last("LIMIT 3");// 随机排序并限制返回结果为3条记录
+//        List<News> newsList = newsMapper.selectList(newsWrapper);
+//
+//        // 封装结果
+//        List<Map<String, Object>> newsData = new ArrayList<>();
+//        for (News news : newsList) {
+//            Map<String, Object> newsInfo = new HashMap<>();
+//            newsInfo.put("title", news.getHeadline());
+//            newsInfo.put("content", news.getNewsBody());
+//            newsData.add(newsInfo);
+//        }
+//        result.data.put("news", newsData);
+//
+//        return result;
+//    }
 
     //组合查询
     @GetMapping("/CombineSearch")
@@ -225,212 +233,245 @@ public class NewsController {
         Result result = new Result();
         //int日期
         int intstartdate=0, intenddate=0;
-
-        // 默认起始日期为该新闻最早被点击的日期
-        if (startDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("ClickNews", newsId)
-                    .orderByAsc("ClickTime")
-                    .select("ClickTime")
-                    .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
-            if (click != null) {
-                intstartdate = click.getClicktime();
-            }
-            else{
-                return result;
-            }
+        String integerStringS = startDate.replace("-", "");
+        String integerStringE = endDate.replace("-", "");
+        int integerValueS = Integer.parseInt(integerStringS);
+        int integerValueE = Integer.parseInt(integerStringE);
+        result.data.put("total",integerValueE-integerValueS+1);
+        //List<Integer> list= new ArrayList<>();
+        int[] array = new int[integerValueE-integerValueS+1];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = 0;
         }
-        else {
-            intstartdate = convertDateStringToInt(startDate);
-        }
+        QueryWrapper<Dailyclick> wrapper=new QueryWrapper<>();
+        wrapper.eq("ClickNews",newsId).between("Day",integerValueS,integerValueE);
+        List<Dailyclick> tmpList=dailyclickMapper.selectList(wrapper);
 
-        // 默认结束日期为该新闻最后被点击的日期
-        if (endDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("ClickNews", newsId)
-                    .orderByDesc("ClickTime")
-                    .select("ClickTime")
-                    .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
-            if (click != null) {
-                intenddate = click.getClicktime();
-            }
-            else {
-                return result;
+        for(Dailyclick d:tmpList){
+            int index=d.getDay()-integerValueS;
+            if(index<integerValueE-integerValueS+1){
+                array[index]=d.getNum();
             }
         }
-        else{
-            intenddate = convertDateStringToInt(endDate);
-        }
+        result.data.put("list",array);
 
 
-        // 查询日期范围内该新闻每一天的点击量
-        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-        clickWrapper.eq("ClickNews", newsId)
-                .between("ClickTime", intstartdate,  intenddate)
-                .groupBy("ClickTime")
-                .select("ClickTime, COUNT(*) as clickCount");
-        List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(clickWrapper);
-
-        // 封装结果
-        List<Map<String, Object>> clickData = new ArrayList<>();
-        for (Map<String, Object> clickCount : clickCountList) {
-            Map<String, Object> clickInfo = new HashMap<>();
-            clickInfo.put("date", clickCount.get("ClickTime"));
-            clickInfo.put("clickCount", clickCount.get("clickCount"));
-            clickData.add(clickInfo);
-        }
-
-        result.data.put("clicks", clickData);
+//        // 默认起始日期为该新闻最早被点击的日期
+//        if (startDate == null) {
+//            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//            clickWrapper.eq("ClickNews", newsId)
+//                    .orderByAsc("ClickTime")
+//                    .select("ClickTime")
+//                    .last("LIMIT 1");
+//            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
+//            if (click != null) {
+//                intstartdate = click.getClicktime();
+//            }
+//            else{
+//                return result;
+//            }
+//        }
+//        else {
+//            intstartdate = convertDateStringToInt(startDate);
+//        }
+//
+//        // 默认结束日期为该新闻最后被点击的日期
+//        if (endDate == null) {
+//            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//            clickWrapper.eq("ClickNews", newsId)
+//                    .orderByDesc("ClickTime")
+//                    .select("ClickTime")
+//                    .last("LIMIT 1");
+//            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
+//            if (click != null) {
+//                intenddate = click.getClicktime();
+//            }
+//            else {
+//                return result;
+//            }
+//        }
+//        else{
+//            intenddate = convertDateStringToInt(endDate);
+//        }
+//
+//
+//        // 查询日期范围内该新闻每一天的点击量
+//        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//        clickWrapper.eq("ClickNews", newsId)
+//                .between("ClickTime", intstartdate,  intenddate)
+//                .groupBy("ClickTime")
+//                .select("ClickTime, COUNT(*) as clickCount");
+//        List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(clickWrapper);
+//
+//        // 封装结果
+//        List<Map<String, Object>> clickData = new ArrayList<>();
+//        for (Map<String, Object> clickCount : clickCountList) {
+//            Map<String, Object> clickInfo = new HashMap<>();
+//            clickInfo.put("date", clickCount.get("ClickTime"));
+//            clickInfo.put("clickCount", clickCount.get("clickCount"));
+//            clickData.add(clickInfo);
+//        }
+//
+//        result.data.put("clicks", clickData);
         return result;
     }
 
-    //新闻类别点击量变化
+    //新闻类别点击量变化(slow!!!!!!!!!!!!!!)
     @GetMapping("/CategoryClickCount")
-    public Result getCategoryClickCount(String category, String startDate, String endDate) {
+    public Result getCategoryClickCount(String category, String startDate, String endDate) throws ParseException {
         Result result = new Result();
         //int日期
         int intstartdate=0, intenddate=0;
-
-        // 默认起始日期为该新闻类别最早被点击的日期
-        if (startDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("Category", category)
-                    .orderByAsc("ClickTime")
-                    .select("ClickTime")
-                    .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
-            if (click != null) {
-                intstartdate = click.getClicktime();
-            }
-            else{
-                return result;
-            }
+        int s_day=Integer.parseInt(startDate);
+        int e_day=Integer.parseInt(endDate);
+        int[] array = new int[e_day-s_day+1];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = 0;
         }
-        else {
-            intstartdate = convertDateStringToInt(startDate);
-        }
+        result.data.put("total",e_day-s_day+1);
+        QueryWrapper<Dailyclick> wrapper=new QueryWrapper<>();
+        wrapper.eq("Category",category).between("Day", s_day,e_day);
+        List<Dailyclick> tmpList=dailyclickMapper.selectList(wrapper);
 
-        // 默认结束日期为该新闻类别最后被点击的日期
-        if (endDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("Category", category)
-                    .orderByDesc("ClickTime")
-                    .select("ClickTime")
-                    .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
-            if (click != null) {
-                intenddate = click.getClicktime();
-            }
-            else {
-                return result;
+
+        for(Dailyclick d:tmpList){
+            int index=d.getDay()-s_day;
+            if(index<e_day-s_day+1){
+                array[index]=d.getNum();
             }
         }
-        else{
-            intenddate = convertDateStringToInt(endDate);
-        }
+        result.data.put("list",array);
 
-        // 查询日期范围内该类别新闻每一天的总点击量
-        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-        clickWrapper.eq("Category", category)
-                .between("ClickTime", intstartdate, intenddate)
-                .groupBy("ClickTime")
-                .select("ClickTime, COUNT(*) as clickCount");
-        List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(clickWrapper);
 
-        // 封装结果
-        List<Map<String, Object>> clickData = new ArrayList<>();
-        for (Map<String, Object> clickCount : clickCountList) {
-            Map<String, Object> clickInfo = new HashMap<>();
-            clickInfo.put("date", clickCount.get("ClickTime"));
-            clickInfo.put("clickCount", clickCount.get("clickCount"));
-            clickData.add(clickInfo);
-        }
+//        // 默认起始日期为该新闻类别最早被点击的日期
+//        if (startDate == null) {
+//            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//            clickWrapper.eq("Category", category)
+//                    .orderByAsc("ClickTime")
+//                    .select("ClickTime")
+//                    .last("LIMIT 1");
+//            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
+//            if (click != null) {
+//                intstartdate = click.getClicktime();
+//            }
+//            else{
+//                return result;
+//            }
+//        }
+//        else {
+//            intstartdate = convertDateStringToInt(startDate);
+//        }
+//
+//        // 默认结束日期为该新闻类别最后被点击的日期
+//        if (endDate == null) {
+//            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//            clickWrapper.eq("Category", category)
+//                    .orderByDesc("ClickTime")
+//                    .select("ClickTime")
+//                    .last("LIMIT 1");
+//            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
+//            if (click != null) {
+//                intenddate = click.getClicktime();
+//            }
+//            else {
+//                return result;
+//            }
+//        }
+//        else{
+//            intenddate = convertDateStringToInt(endDate);
+//        }
+//
+//        // 查询日期范围内该类别新闻每一天的总点击量
+//        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
+//        clickWrapper.eq("Category", category)
+//                .between("ClickTime", intstartdate, intenddate)
+//                .groupBy("ClickTime")
+//                .select("ClickTime, COUNT(*) as clickCount");
+//        List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(clickWrapper);
+//
+//        // 封装结果
+//        List<Map<String, Object>> clickData = new ArrayList<>();
+//        for (Map<String, Object> clickCount : clickCountList) {
+//            Map<String, Object> clickInfo = new HashMap<>();
+//            clickInfo.put("date", clickCount.get("ClickTime"));
+//            clickInfo.put("clickCount", clickCount.get("clickCount"));
+//            clickData.add(clickInfo);
+//        }
 
-        result.data.put("clicks", clickData);
+//        result.data.put("clicks", clickData);
         return result;
     }
 
     //用户新闻类别点击量变化
     @GetMapping("/UserCategoryClickCount")
-    public Result getUserCategoryClickCount(String userId, String startDate, String endDate) {
+    public Result getUserCategoryClickCount(String userId, String startDate, String endDate) throws ParseException {
         Result result = new Result();
         //int日期
         int intstartdate=0, intenddate=0;
-
-        // 默认起始日期为该用户点击的新闻最早日期
-        if (startDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("UserId", userId)
-                    .orderByAsc("ClickTime")
-                    .select("ClickTime")
-                    .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
-            if (click != null) {
-                intstartdate = click.getClicktime();
-            }
-            else{
-                return result;
-            }
-        }
-        else {
-            intstartdate = convertDateStringToInt(startDate);
-        }
-
-        // 默认结束日期为该用户点击的新闻最后日期
-        if (endDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("UserId", userId)
-                    .orderByDesc("ClickTime")
-                    .select("ClickTime")
-                    .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
-            if (click != null) {
-                intenddate = click.getClicktime();
-            }
-            else {
-                return result;
-            }
-        }
-        else{
-            intenddate = convertDateStringToInt(endDate);
-        }
-
-        // 检索日期范围内该用户点击的所有新闻类别
+        String startdate=startDate+" 00:00:00";
+        String enddate=endDate+" 23:59:59";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date s_date = format.parse(startdate);
+        int startdate_i = (int)(s_date.getTime() / 1000);  // 转换为秒级时间戳
+        Date e_date = format.parse(enddate);
+        int enddate_i = (int)(e_date.getTime() / 1000);  // 转换为秒级时间戳
         QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-        clickWrapper.eq("UserId", userId)
-                .between("ClickTime", intstartdate, intenddate)
-                .groupBy("Category")
-                .select("Category");
-        List<Object> categoryObjects = clicksIntMapper.selectObjs(clickWrapper);
+        List<ClicksInt> resultList=new ArrayList<>();
 
-        // 将结果转换为 List<String>
-        List<String> categories = new ArrayList<>();
-        for (Object categoryObject : categoryObjects) {
-            categories.add(String.valueOf(categoryObject));
+        int currentTimestamp = startdate_i;
+        int interval = 86400; // 时间段的间隔，即86400秒
+        List<Integer> segmentPoints = new ArrayList<>();
+        while (currentTimestamp < enddate_i) {
+            segmentPoints.add(currentTimestamp);
+            currentTimestamp += interval;
         }
+        segmentPoints.add(currentTimestamp);
+        //有几个区间
+        int numOfTime=segmentPoints.size();
+        result.data.put("total",numOfTime-1);
 
-        // 计算日期范围内每天每个类别的新闻总点击量
-        QueryWrapper<ClicksInt> countWrapper = new QueryWrapper<>();
-        countWrapper.eq("UserId", userId)
-                .between("ClickTime", startDate, endDate)
-                .groupBy("ClickTime, Category")
-                .select("ClickTime, Category, COUNT(*) as clickCount");
-        List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(countWrapper);
+        for(int i=0;i<numOfTime-1;i++){
+            QueryWrapper<ClicksInt> clickWrapperCopy = clickWrapper;
+            int start= segmentPoints.get(i);
+            int end= segmentPoints.get(i + 1);
+            String aa = "时间段" + i;
+            // 将整数时间戳转换为Date对象
+            Date date = new Date((long) start * 1000);
+            // 格式化Date对象为"yyyy-MM-dd"格式的字符串
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            String formattedDate = sdf.format(date);
+            result.data.put(aa,formattedDate);
+            long startTime = System.currentTimeMillis();
+            clickWrapperCopy.eq("UserId",userId).between("ClickTime", start, end);
+            long endTime = System.currentTimeMillis();
 
-        // 封装结果
-        List<Map<String, Object>> clickData = new ArrayList<>();
-        for (Map<String, Object> clickCount : clickCountList) {
-            Map<String, Object> clickInfo = new HashMap<>();
-            clickInfo.put("date", clickCount.get("ClickTime"));
-            clickInfo.put("category", clickCount.get("Category"));
-            clickInfo.put("clickCount", clickCount.get("clickCount"));
-            clickData.add(clickInfo);
+            // 计算时间差
+            long elapsedTime = endTime - startTime;
+            System.out.println("执行时间: " + elapsedTime + " 毫秒");
+            List<ClicksInt> list=clicksIntMapper.selectList(clickWrapperCopy);
+            List<Integer> numList=new ArrayList<>();
+            List<String> categoryList=new ArrayList<>();
+            // 创建一个空的字典
+            Map<String, Integer> dictionary = new HashMap<>();
+            // 遍历 ClicksInt 列表并统计数量
+            for (ClicksInt clicksInt : list) {
+                String category = clicksInt.getCategory();
+                int index = categoryList.indexOf(clicksInt.getCategory());
+                if (index != -1) {
+                    numList.set(index, numList.get(index) + 1);
+                } else {
+                    categoryList.add(clicksInt.getCategory());
+                    numList.add(1);
+                }
+            }
+            String bb = "类别" + i;
+            String cc = "数量" + i;
+
+            result.data.put(bb,categoryList);
+            result.data.put(cc,numList);
         }
-
-        result.data.put("clicks", clickData);
-        result.data.put("categories", categories);
+        result.status=true;
+        result.errorCode=200;
         return result;
     }
 
