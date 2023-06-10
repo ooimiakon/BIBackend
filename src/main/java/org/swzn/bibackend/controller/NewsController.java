@@ -69,9 +69,32 @@ public class NewsController {
         }
         return 0;
     }
-    public static int convertStringToTimestamp(String dateString, String time) {
+    public static int convertStringToStartstamp(String dateString) {
         try {
-            String dateTimeString = dateString + " " + time;
+            String dateTimeString = dateString + " 00:00:00";
+
+            // 定义日期格式
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+            // 解析字符串为日期对象
+            Date date = sdf.parse(dateTimeString);
+
+            // 获取时间戳（以秒为单位）
+            long timestamp = date.getTime() / 1000;
+
+            // 将时间戳转换为int类型
+            int timestampInt = (int) timestamp;
+
+            return timestampInt;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return 0; // 如果转换失败，返回0或其他默认值
+    }
+    public static int convertStringToEndstamp(String dateString) {
+        try {
+            String dateTimeString = dateString + " 23:59:59";
 
             // 定义日期格式
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -93,24 +116,25 @@ public class NewsController {
         return 0; // 如果转换失败，返回0或其他默认值
     }
 
+
     //推荐新闻
     @GetMapping("/Recommend")
     public Result getRecommend(String userId, String date) {
         Result result = new Result();
 
-        int intdate = convertDateStringToInt(date);
-
+        int intstartdate = convertStringToStartstamp(date);
+        int intenddate = convertStringToEndstamp(date);
 
         // 查询用户当天点击过的所有新闻
         QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
         clickWrapper.eq("UserId", userId)
-                .between("ClickTime", intstartdate,  intenddate)
+                .between("ClickTime", intstartdate,  intenddate);
         List<ClicksInt> clickList = clicksIntMapper.selectList(clickWrapper);
 
         // 统计每个Category的点击量
         Map<String, Integer> categoryCounts = new HashMap<>();
         for (ClicksInt click : clickList) {
-            String category = click.getClicknews();
+            String category = click.getCategory();
             categoryCounts.put(category, categoryCounts.getOrDefault(category, 0) + 1);
         }
 
@@ -128,7 +152,7 @@ public class NewsController {
         QueryWrapper<News> newsWrapper = new QueryWrapper<>();
         newsWrapper.eq("Category", maxCategory)
                 .last("ORDER BY RAND()")
-                .last("LIMIT 3");// 随机排序并限制返回结果为3条记录
+                .last("LIMIT 5");// 随机排序并限制返回结果为3条记录
         List<News> newsList = newsMapper.selectList(newsWrapper);
 
         // 封装结果
@@ -144,17 +168,18 @@ public class NewsController {
         return result;
     }
 
-    //组合查询
+    //组合查询List<String> userIds
     @GetMapping("/CombineSearch")
-    public Result getCombineSearch(List<String> userIds, String date, String topic, Integer headlineLength, Integer newsBodyLength) {
+    public Result getCombineSearch(String userId, String date, String category, Integer headlineLength, Integer newsBodyLength) {
         Result result = new Result();
 
-        int intdate = convertDateStringToInt(date);
+        int intstartdate = convertStringToStartstamp(date);
+        int intenddate = convertStringToEndstamp(date);
 
         // 查询当天用户点击过的新闻ID
         QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-        clickWrapper.in("UserId", userIds)
-                .eq("ClickTime", intdate);
+        clickWrapper.eq("UserId", userId)
+                .between("ClickTime", intstartdate,  intenddate);
         List<ClicksInt> clickList = clicksIntMapper.selectList(clickWrapper);
 
         List<String> newsIds = new ArrayList<>();
@@ -167,22 +192,23 @@ public class NewsController {
         newsWrapper.in("News_ID", newsIds);
 
         // 添加新闻主题的查询条件
-        if (topic != null && !topic.isEmpty()) {
-            newsWrapper.eq("Topic", topic);
+        if (category != null && !category.isEmpty()) {
+            newsWrapper.eq("Category", category);
         }
 
         // 添加新闻标题长度的查询条件
         if (headlineLength != null) {
-            newsWrapper.apply("LENGTH(Headline) = " + headlineLength);
+            newsWrapper.apply("LENGTH(Headline) < " + headlineLength);
         }
 
         // 添加新闻内容长度的查询条件
         if (newsBodyLength != null) {
-            newsWrapper.apply("LENGTH(NewsBody) = " + newsBodyLength);
+            newsWrapper.apply("LENGTH(News_Body) < " + newsBodyLength);
         }
 
         // 随机返回最多3条符合条件的新闻
-        newsWrapper.last("ORDER BY RAND() LIMIT 3");
+        newsWrapper .last("ORDER BY RAND()")
+                .last("LIMIT 5");// 随机排序并限制返回结果为3条记录
 
         // 检索新闻的标题和内容
         List<News> newsList = newsMapper.selectList(newsWrapper);
