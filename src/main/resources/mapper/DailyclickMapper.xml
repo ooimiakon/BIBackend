@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.swzn.bibackend.mapper.DailyclickMapper">
+
+    <resultMap id="BaseResultMap" type="org.swzn.bibackend.entity.Dailyclick">
+            <id property="dailyclickid" column="DailyClickId" jdbcType="INTEGER"/>
+            <id property="day" column="Day" jdbcType="INTEGER"/>
+            <result property="category" column="Category" jdbcType="CHAR"/>
+            <result property="clicknews" column="ClickNews" jdbcType="CHAR"/>
+            <result property="num" column="Num" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        DailyClickId,Day,Category,
+        ClickNews,Num
+    </sql>
+</mapper>

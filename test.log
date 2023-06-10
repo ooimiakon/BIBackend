@@ -1,0 +1,671 @@
+2023-06-10 00:02:44.614  INFO 38988 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 00:02:44.679  INFO 38988 --- [Thread-99] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 00:02:44.685  INFO 38988 --- [Thread-99] com.alibaba.druid.pool.DruidDataSource   : {dataSource-25} closing ...
+2023-06-10 00:02:44.686  INFO 38988 --- [Thread-99] com.alibaba.druid.pool.DruidDataSource   : {dataSource-25} closed
+2023-06-10 00:02:44.798  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 38988 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 00:02:44.798  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 00:02:45.449  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 00:02:45.450  INFO 38988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 00:02:45.450  INFO 38988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 00:02:45.480  INFO 38988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 00:02:45.480  INFO 38988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 678 ms
+2023-06-10 00:02:45.512  INFO 38988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 00:02:45.519  INFO 38988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-26} inited
+2023-06-10 00:02:45.745  INFO 38988 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 00:02:45.792  INFO 38988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 00:02:45.853  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 00:02:45.854  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 00:02:45.855  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 00:02:45.859  INFO 38988 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 00:02:45.873  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.123 seconds (JVM running for 4221.114)
+2023-06-10 00:02:45.876  INFO 38988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 00:15:53.953  INFO 38988 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 00:15:54.004  INFO 38988 --- [Thread-103] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 00:15:54.015  INFO 38988 --- [Thread-103] com.alibaba.druid.pool.DruidDataSource   : {dataSource-26} closing ...
+2023-06-10 00:15:54.016  INFO 38988 --- [Thread-103] com.alibaba.druid.pool.DruidDataSource   : {dataSource-26} closed
+2023-06-10 00:15:54.101  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 38988 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 00:15:54.101  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 00:15:54.350  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 00:15:54.350  INFO 38988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 00:15:54.350  INFO 38988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 00:15:54.369  INFO 38988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 00:15:54.369  INFO 38988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 266 ms
+2023-06-10 00:15:54.389  INFO 38988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 00:15:54.396  INFO 38988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-27} inited
+2023-06-10 00:15:54.539  INFO 38988 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 00:15:54.571  INFO 38988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 00:15:54.625  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 00:15:54.625  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 00:15:54.626  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 00:15:54.628  INFO 38988 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 00:15:54.638  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.559 seconds (JVM running for 5009.879)
+2023-06-10 00:15:54.639  INFO 38988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 00:17:34.402  INFO 38988 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 00:17:34.448  INFO 38988 --- [Thread-107] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 00:17:34.455  INFO 38988 --- [Thread-107] com.alibaba.druid.pool.DruidDataSource   : {dataSource-27} closing ...
+2023-06-10 00:17:34.455  INFO 38988 --- [Thread-107] com.alibaba.druid.pool.DruidDataSource   : {dataSource-27} closed
+2023-06-10 00:17:34.552  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 38988 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 00:17:34.552  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 00:17:34.852  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 00:17:34.852  INFO 38988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 00:17:34.852  INFO 38988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 00:17:34.871  INFO 38988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 00:17:34.871  INFO 38988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 317 ms
+2023-06-10 00:17:34.891  INFO 38988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 00:17:34.897  INFO 38988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-28} inited
+2023-06-10 00:17:35.043  INFO 38988 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 00:17:35.068  INFO 38988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 00:17:35.112  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 00:17:35.113  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 00:17:35.113  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 00:17:35.116  INFO 38988 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 00:17:35.125  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.607 seconds (JVM running for 5110.365)
+2023-06-10 00:17:35.126  INFO 38988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 00:18:43.315  INFO 38988 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 00:18:43.357  INFO 38988 --- [Thread-111] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 00:18:43.361  INFO 38988 --- [Thread-111] com.alibaba.druid.pool.DruidDataSource   : {dataSource-28} closing ...
+2023-06-10 00:18:43.361  INFO 38988 --- [Thread-111] com.alibaba.druid.pool.DruidDataSource   : {dataSource-28} closed
+2023-06-10 00:18:43.418  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 38988 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 00:18:43.418  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 00:18:43.622  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 00:18:43.623  INFO 38988 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 00:18:43.623  INFO 38988 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 00:18:43.640  INFO 38988 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 00:18:43.640  INFO 38988 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 220 ms
+2023-06-10 00:18:43.658  INFO 38988 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 00:18:43.663  INFO 38988 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-29} inited
+2023-06-10 00:18:43.789  INFO 38988 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 00:18:43.815  INFO 38988 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 00:18:43.859  INFO 38988 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 00:18:43.859  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 00:18:43.860  INFO 38988 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 00:18:43.862  INFO 38988 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 00:18:43.871  INFO 38988 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.47 seconds (JVM running for 5179.111)
+2023-06-10 00:18:43.873  INFO 38988 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 00:24:34.817  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 21164 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 00:24:34.818  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 00:24:34.859  INFO 21164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-10 00:24:34.859  INFO 21164 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-10 00:24:35.855  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 00:24:35.861  INFO 21164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 00:24:35.861  INFO 21164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 00:24:35.927  INFO 21164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 00:24:35.928  INFO 21164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1069 ms
+2023-06-10 00:24:36.034  INFO 21164 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 00:24:36.089  INFO 21164 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-10 00:24:36.561  INFO 21164 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 00:24:36.650  INFO 21164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 00:24:36.826  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 00:24:36.827  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 00:24:36.839  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 00:24:36.865  INFO 21164 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 00:24:36.957  WARN 21164 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 00:24:36.989  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.536 seconds (JVM running for 3.608)
+2023-06-10 00:25:24.388  INFO 21164 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-10 00:25:24.389  INFO 21164 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-10 00:25:24.390  INFO 21164 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-10 01:36:39.150 ERROR 21164 --- [http-nio-3002-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: No primary or single unique constructor found for interface java.util.List] with root cause
+
+java.lang.IllegalStateException: No primary or single unique constructor found for interface java.util.List
+	at org.springframework.beans.BeanUtils.getResolvableConstructor(BeanUtils.java:267) ~[spring-beans-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.createAttribute(ModelAttributeMethodProcessor.java:219) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletModelAttributeMethodProcessor.createAttribute(ServletModelAttributeMethodProcessor.java:85) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:147) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.24.jar:5.3.24]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779) ~[tomcat-embed-core-9.0.69.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.24.jar:5.3.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.69.jar:9.0.69]
+	at java.base/java.lang.Thread.run(Thread.java:1589) ~[na:na]
+
+2023-06-10 12:37:19.392  INFO 21164 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 12:37:19.493  INFO 21164 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 12:37:19.498  INFO 21164 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-10 12:37:19.547  INFO 21164 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-10 12:37:19.548  INFO 21164 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-10 12:37:19.672  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 21164 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 12:37:19.673  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 12:37:20.092  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 12:37:20.092  INFO 21164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 12:37:20.093  INFO 21164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 12:37:20.112  INFO 21164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 12:37:20.113  INFO 21164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 437 ms
+2023-06-10 12:37:20.138  INFO 21164 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 12:37:20.148  INFO 21164 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-10 12:37:20.350  INFO 21164 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 12:37:20.392  INFO 21164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 12:37:20.449  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 12:37:20.450  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 12:37:20.450  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 12:37:20.453  INFO 21164 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 12:37:20.463  WARN 21164 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 12:37:20.477  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.841 seconds (JVM running for 43967.096)
+2023-06-10 12:37:20.479  INFO 21164 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 12:40:26.645  INFO 21164 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 12:40:26.677  INFO 21164 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 12:40:26.683  INFO 21164 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-06-10 12:40:26.684  INFO 21164 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-06-10 12:40:26.766  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 21164 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 12:40:26.766  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 12:40:27.030  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 12:40:27.032  INFO 21164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 12:40:27.032  INFO 21164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 12:40:27.053  INFO 21164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 12:40:27.053  INFO 21164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 284 ms
+2023-06-10 12:40:27.076  INFO 21164 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 12:40:27.085  INFO 21164 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-06-10 12:40:27.252  INFO 21164 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 12:40:27.284  INFO 21164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 12:40:27.333  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 12:40:27.333  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 12:40:27.334  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 12:40:27.337  INFO 21164 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 12:40:27.344  WARN 21164 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 12:40:27.356  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.61 seconds (JVM running for 44153.975)
+2023-06-10 12:40:27.358  INFO 21164 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 12:41:26.740  INFO 21164 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-10 12:41:26.741  INFO 21164 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-10 12:41:26.743  INFO 21164 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-10 13:14:51.763  INFO 21164 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2023-06-10 13:14:51.953  INFO 21164 --- [Thread-12] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:14:51.957  INFO 21164 --- [Thread-12] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-10 13:14:51.992  INFO 21164 --- [Thread-12] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
+2023-06-10 13:14:51.993  INFO 21164 --- [Thread-12] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2023-06-10 13:14:52.193  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 21164 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:14:52.194  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:14:52.738  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:14:52.739  INFO 21164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:14:52.739  INFO 21164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:14:52.766  INFO 21164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:14:52.766  INFO 21164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 567 ms
+2023-06-10 13:14:52.825  INFO 21164 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:14:52.837  INFO 21164 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2023-06-10 13:14:53.036  INFO 21164 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:14:53.079  INFO 21164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:14:53.138  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:14:53.139  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:14:53.139  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:14:53.143  INFO 21164 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:14:53.150  WARN 21164 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:14:53.162  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.027 seconds (JVM running for 46219.781)
+2023-06-10 13:14:53.163  INFO 21164 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:15:05.985  INFO 21164 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (4 additions, 0 deletions, 0 modifications)
+2023-06-10 13:15:06.226  INFO 21164 --- [Thread-16] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:15:06.233  INFO 21164 --- [Thread-16] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closing ...
+2023-06-10 13:15:06.233  INFO 21164 --- [Thread-16] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
+2023-06-10 13:15:06.402  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 21164 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:15:06.403  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:15:08.408  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:15:08.409  INFO 21164 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:15:08.410  INFO 21164 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:15:08.468  INFO 21164 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:15:08.469  INFO 21164 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2063 ms
+2023-06-10 13:15:08.520  INFO 21164 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:15:08.540  INFO 21164 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} inited
+2023-06-10 13:15:09.544  INFO 21164 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:15:09.636  INFO 21164 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:15:09.938  INFO 21164 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:15:09.940  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:15:09.940  INFO 21164 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:15:09.972  INFO 21164 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:15:09.986  WARN 21164 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:15:10.002  INFO 21164 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 3.689 seconds (JVM running for 46236.621)
+2023-06-10 13:15:10.003  INFO 21164 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:18:47.053  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:18:47.054  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:18:47.107  INFO 19664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-10 13:18:47.107  INFO 19664 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-10 13:18:48.371  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:18:48.379  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:18:48.380  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:18:48.469  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:18:48.469  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1361 ms
+2023-06-10 13:18:48.624  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:18:48.714  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-10 13:18:49.550  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:18:49.675  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:18:49.905  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:18:49.906  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:18:49.922  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:18:49.950  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:18:50.039  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:18:50.083  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 3.44 seconds (JVM running for 5.034)
+2023-06-10 13:19:13.291  INFO 19664 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-10 13:19:13.292  INFO 19664 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-10 13:19:13.294  INFO 19664 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-10 13:35:15.538  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:35:15.615  INFO 19664 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:35:15.618  INFO 19664 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-10 13:35:15.653  INFO 19664 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-10 13:35:15.656  INFO 19664 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-10 13:35:15.788  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:35:15.788  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:35:16.312  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:35:16.314  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:35:16.314  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:35:16.339  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:35:16.339  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 546 ms
+2023-06-10 13:35:16.377  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:35:16.390  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-10 13:35:16.791  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:35:16.840  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:35:16.921  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:35:16.922  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:35:16.924  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:35:16.929  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:35:16.940  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:35:16.960  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.222 seconds (JVM running for 991.911)
+2023-06-10 13:35:16.963  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:43:27.828  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:43:27.886  INFO 19664 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:43:27.895  INFO 19664 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-06-10 13:43:27.895  INFO 19664 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-06-10 13:43:28.020  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:43:28.021  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:43:28.416  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:43:28.417  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:43:28.418  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:43:28.456  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:43:28.457  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 432 ms
+2023-06-10 13:43:28.483  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:43:28.493  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-06-10 13:43:28.792  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:43:28.861  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:43:28.924  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:43:28.924  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:43:28.925  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:43:28.928  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:43:28.938  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:43:28.951  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.983 seconds (JVM running for 1483.901)
+2023-06-10 13:43:28.952  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:44:22.032  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:44:22.077  INFO 19664 --- [Thread-11] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:44:22.084  INFO 19664 --- [Thread-11] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closing ...
+2023-06-10 13:44:22.084  INFO 19664 --- [Thread-11] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} closed
+2023-06-10 13:44:22.206  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:44:22.207  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:44:22.694  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:44:22.696  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:44:22.697  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:44:22.723  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:44:22.724  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 513 ms
+2023-06-10 13:44:22.753  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:44:22.761  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} inited
+2023-06-10 13:44:23.002  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:44:23.030  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:44:23.076  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:44:23.077  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:44:23.077  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:44:23.080  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:44:23.087  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:44:23.097  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.931 seconds (JVM running for 1538.048)
+2023-06-10 13:44:23.099  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:44:54.349  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:44:54.378  INFO 19664 --- [Thread-15] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:44:54.383  INFO 19664 --- [Thread-15] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closing ...
+2023-06-10 13:44:54.383  INFO 19664 --- [Thread-15] com.alibaba.druid.pool.DruidDataSource   : {dataSource-4} closed
+2023-06-10 13:44:54.436  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:44:54.436  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:44:54.739  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:44:54.740  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:44:54.741  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:44:54.778  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:44:54.778  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 341 ms
+2023-06-10 13:44:54.815  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:44:54.826  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} inited
+2023-06-10 13:44:55.252  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:44:55.300  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:44:55.387  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:44:55.387  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:44:55.388  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:44:55.393  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:44:55.401  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:44:55.413  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.996 seconds (JVM running for 1570.364)
+2023-06-10 13:44:55.414  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:47:15.928  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:47:15.976  INFO 19664 --- [Thread-19] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:47:15.984  INFO 19664 --- [Thread-19] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closing ...
+2023-06-10 13:47:15.984  INFO 19664 --- [Thread-19] com.alibaba.druid.pool.DruidDataSource   : {dataSource-5} closed
+2023-06-10 13:47:16.070  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:47:16.071  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:47:16.343  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:47:16.343  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:47:16.343  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:47:16.363  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:47:16.363  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 288 ms
+2023-06-10 13:47:16.388  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:47:16.399  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} inited
+2023-06-10 13:47:16.603  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:47:16.642  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:47:16.694  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:47:16.694  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:47:16.695  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:47:16.697  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:47:16.704  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:47:16.712  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.679 seconds (JVM running for 1711.664)
+2023-06-10 13:47:16.714  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:47:33.588  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:47:33.637  INFO 19664 --- [Thread-23] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:47:33.641  INFO 19664 --- [Thread-23] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closing ...
+2023-06-10 13:47:33.641  INFO 19664 --- [Thread-23] com.alibaba.druid.pool.DruidDataSource   : {dataSource-6} closed
+2023-06-10 13:47:33.706  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:47:33.708  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:47:33.947  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:47:33.948  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:47:33.948  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:47:33.968  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:47:33.969  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 259 ms
+2023-06-10 13:47:33.992  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:47:33.998  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} inited
+2023-06-10 13:47:34.191  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:47:34.216  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:47:34.271  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:47:34.271  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:47:34.272  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:47:34.274  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:47:34.280  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:47:34.290  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.604 seconds (JVM running for 1729.241)
+2023-06-10 13:47:34.291  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:51:04.015  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:51:04.117  INFO 19664 --- [Thread-27] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:51:04.123  INFO 19664 --- [Thread-27] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closing ...
+2023-06-10 13:51:04.123  INFO 19664 --- [Thread-27] com.alibaba.druid.pool.DruidDataSource   : {dataSource-7} closed
+2023-06-10 13:51:04.232  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:51:04.232  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:51:04.711  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:51:04.712  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:51:04.712  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:51:04.734  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:51:04.734  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 499 ms
+2023-06-10 13:51:04.774  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:51:04.792  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} inited
+2023-06-10 13:51:05.159  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:51:05.204  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:51:05.277  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:51:05.277  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:51:05.278  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:51:05.281  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:51:05.291  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:51:05.309  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.119 seconds (JVM running for 1940.26)
+2023-06-10 13:51:05.311  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:52:12.590  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:52:12.625  INFO 19664 --- [Thread-31] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:52:12.629  INFO 19664 --- [Thread-31] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closing ...
+2023-06-10 13:52:12.629  INFO 19664 --- [Thread-31] com.alibaba.druid.pool.DruidDataSource   : {dataSource-8} closed
+2023-06-10 13:52:12.729  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:52:12.732  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:52:13.128  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:52:13.129  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:52:13.130  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:52:13.160  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:52:13.160  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 426 ms
+2023-06-10 13:52:13.186  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:52:13.197  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} inited
+2023-06-10 13:52:13.459  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:52:13.495  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:52:13.558  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:52:13.560  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:52:13.560  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:52:13.562  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:52:13.567  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:52:13.580  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.897 seconds (JVM running for 2008.531)
+2023-06-10 13:52:13.582  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:55:10.835  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:55:10.891  INFO 19664 --- [Thread-35] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:55:10.899  INFO 19664 --- [Thread-35] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} closing ...
+2023-06-10 13:55:10.899  INFO 19664 --- [Thread-35] com.alibaba.druid.pool.DruidDataSource   : {dataSource-9} closed
+2023-06-10 13:55:10.974  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:55:10.974  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:55:11.325  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:55:11.326  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:55:11.326  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:55:11.346  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:55:11.346  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 370 ms
+2023-06-10 13:55:11.367  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:55:11.377  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-10} inited
+2023-06-10 13:55:11.584  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:55:11.615  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:55:11.666  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:55:11.666  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:55:11.666  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:55:11.669  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:55:11.678  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:55:11.687  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.739 seconds (JVM running for 2186.638)
+2023-06-10 13:55:11.688  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 13:57:31.958  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 13:57:31.994  INFO 19664 --- [Thread-39] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 13:57:32.004  INFO 19664 --- [Thread-39] com.alibaba.druid.pool.DruidDataSource   : {dataSource-10} closing ...
+2023-06-10 13:57:32.004  INFO 19664 --- [Thread-39] com.alibaba.druid.pool.DruidDataSource   : {dataSource-10} closed
+2023-06-10 13:57:32.079  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 13:57:32.079  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 13:57:32.381  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 13:57:32.381  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 13:57:32.381  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 13:57:32.406  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 13:57:32.406  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 325 ms
+2023-06-10 13:57:32.430  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 13:57:32.442  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-11} inited
+2023-06-10 13:57:32.664  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 13:57:32.706  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 13:57:32.763  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 13:57:32.764  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 13:57:32.764  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 13:57:32.767  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 13:57:32.777  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 13:57:32.787  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.735 seconds (JVM running for 2327.738)
+2023-06-10 13:57:32.788  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 14:40:10.703  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 14:40:10.774  INFO 19664 --- [Thread-43] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 14:40:10.800  INFO 19664 --- [Thread-43] com.alibaba.druid.pool.DruidDataSource   : {dataSource-11} closing ...
+2023-06-10 14:40:10.801  INFO 19664 --- [Thread-43] com.alibaba.druid.pool.DruidDataSource   : {dataSource-11} closed
+2023-06-10 14:40:10.934  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 14:40:10.935  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 14:40:11.326  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 14:40:11.326  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 14:40:11.327  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 14:40:11.347  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 14:40:11.347  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 409 ms
+2023-06-10 14:40:11.382  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 14:40:11.396  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-12} inited
+2023-06-10 14:40:11.608  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 14:40:11.654  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 14:40:11.726  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 14:40:11.726  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 14:40:11.726  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 14:40:11.729  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 14:40:11.736  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 14:40:11.746  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.858 seconds (JVM running for 4886.697)
+2023-06-10 14:40:11.748  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 14:41:24.031  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 14:41:24.071  INFO 19664 --- [Thread-47] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 14:41:24.074  INFO 19664 --- [Thread-47] com.alibaba.druid.pool.DruidDataSource   : {dataSource-12} closing ...
+2023-06-10 14:41:24.074  INFO 19664 --- [Thread-47] com.alibaba.druid.pool.DruidDataSource   : {dataSource-12} closed
+2023-06-10 14:41:24.137  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 14:41:24.137  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 14:41:24.384  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 14:41:24.385  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 14:41:24.385  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 14:41:24.404  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 14:41:24.404  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 266 ms
+2023-06-10 14:41:24.430  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 14:41:24.437  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-13} inited
+2023-06-10 14:41:24.651  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 14:41:24.678  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 14:41:24.740  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 14:41:24.741  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 14:41:24.741  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 14:41:24.744  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 14:41:24.752  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 14:41:24.762  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.648 seconds (JVM running for 4959.713)
+2023-06-10 14:41:24.763  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 14:43:59.734  INFO 19664 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 14:43:59.784  INFO 19664 --- [Thread-51] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 14:43:59.787  INFO 19664 --- [Thread-51] com.alibaba.druid.pool.DruidDataSource   : {dataSource-13} closing ...
+2023-06-10 14:43:59.788  INFO 19664 --- [Thread-51] com.alibaba.druid.pool.DruidDataSource   : {dataSource-13} closed
+2023-06-10 14:43:59.858  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 19664 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 14:43:59.858  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 14:44:00.158  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 14:44:00.158  INFO 19664 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 14:44:00.159  INFO 19664 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 14:44:00.190  INFO 19664 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 14:44:00.190  INFO 19664 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 330 ms
+2023-06-10 14:44:00.235  INFO 19664 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 14:44:00.247  INFO 19664 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-14} inited
+2023-06-10 14:44:00.582  INFO 19664 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 14:44:00.624  INFO 19664 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 14:44:00.701  INFO 19664 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 14:44:00.701  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 14:44:00.701  INFO 19664 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 14:44:00.706  INFO 19664 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 14:44:00.710  WARN 19664 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 14:44:00.723  INFO 19664 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.888 seconds (JVM running for 5115.674)
+2023-06-10 14:44:00.725  INFO 19664 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 14:44:55.766  INFO 4564 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 4564 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 14:44:55.767  INFO 4564 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 14:44:55.810  INFO 4564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-10 14:44:55.810  INFO 4564 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-10 14:44:56.822  INFO 4564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 14:44:56.829  INFO 4564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 14:44:56.829  INFO 4564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 14:44:56.896  INFO 4564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 14:44:56.896  INFO 4564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1085 ms
+2023-06-10 14:44:57.028  INFO 4564 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 14:44:57.100  INFO 4564 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-10 14:44:57.674  INFO 4564 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 14:44:57.789  INFO 4564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 14:44:57.969  INFO 4564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 14:44:57.970  INFO 4564 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 14:44:57.978  INFO 4564 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 14:44:58.008  INFO 4564 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 14:44:58.077  WARN 4564 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 14:44:58.112  INFO 4564 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.679 seconds (JVM running for 3.557)
+2023-06-10 14:56:35.727  INFO 4564 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 14:56:35.795  INFO 4564 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 14:56:35.820  INFO 4564 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-10 14:56:35.823  INFO 4564 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-10 14:56:35.915  INFO 4564 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 4564 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 14:56:35.916  INFO 4564 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 14:56:36.293  INFO 4564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 14:56:36.293  INFO 4564 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 14:56:36.294  INFO 4564 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 14:56:36.315  INFO 4564 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 14:56:36.315  INFO 4564 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 396 ms
+2023-06-10 14:56:36.343  INFO 4564 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 14:56:36.353  INFO 4564 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-10 14:56:36.663  INFO 4564 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 14:56:36.709  INFO 4564 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 14:56:36.782  INFO 4564 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 14:56:36.783  INFO 4564 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 14:56:36.783  INFO 4564 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 14:56:36.786  INFO 4564 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 14:56:36.797  WARN 4564 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 14:56:36.815  INFO 4564 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.933 seconds (JVM running for 702.261)
+2023-06-10 14:56:36.817  INFO 4564 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 14:56:58.666  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 7480 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 14:56:58.668  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 14:56:58.720  INFO 7480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-10 14:56:58.720  INFO 7480 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-10 14:56:59.726  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 14:56:59.732  INFO 7480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 14:56:59.733  INFO 7480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 14:56:59.808  INFO 7480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 14:56:59.808  INFO 7480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1087 ms
+2023-06-10 14:56:59.921  INFO 7480 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 14:56:59.978  INFO 7480 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-10 14:57:00.555  INFO 7480 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 14:57:00.658  INFO 7480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 14:57:00.817  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 14:57:00.818  INFO 7480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 14:57:00.826  INFO 7480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 14:57:00.852  INFO 7480 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 14:57:00.913  WARN 7480 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 14:57:00.944  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.65 seconds (JVM running for 3.464)
+2023-06-10 14:57:05.591  INFO 7480 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-10 14:57:05.592  INFO 7480 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-10 14:57:05.593  INFO 7480 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-10 15:19:56.017  INFO 7480 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 15:19:56.146  INFO 7480 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 15:19:56.150  INFO 7480 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-10 15:19:56.222  INFO 7480 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-10 15:19:56.228  INFO 7480 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-10 15:19:56.426  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 7480 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 15:19:56.426  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 15:19:56.936  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 15:19:56.937  INFO 7480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 15:19:56.937  INFO 7480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 15:19:56.962  INFO 7480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 15:19:56.962  INFO 7480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
+2023-06-10 15:19:56.992  INFO 7480 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 15:19:57.001  INFO 7480 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-10 15:19:57.442  INFO 7480 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 15:19:57.494  INFO 7480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 15:19:57.573  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 15:19:57.573  INFO 7480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 15:19:57.574  INFO 7480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 15:19:57.578  INFO 7480 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 15:19:57.587  WARN 7480 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 15:19:57.601  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.227 seconds (JVM running for 1380.121)
+2023-06-10 15:19:57.603  INFO 7480 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-10 15:22:49.707  INFO 7480 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-10 15:22:49.732  INFO 7480 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-10 15:22:49.737  INFO 7480 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-06-10 15:22:49.738  INFO 7480 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-06-10 15:22:49.820  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 7480 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-10 15:22:49.821  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-10 15:22:50.083  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-10 15:22:50.084  INFO 7480 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-10 15:22:50.084  INFO 7480 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-10 15:22:50.101  INFO 7480 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-10 15:22:50.101  INFO 7480 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 279 ms
+2023-06-10 15:22:50.132  INFO 7480 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-10 15:22:50.139  INFO 7480 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-06-10 15:22:50.330  INFO 7480 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-10 15:22:50.365  INFO 7480 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-10 15:22:50.418  INFO 7480 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-10 15:22:50.418  INFO 7480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-10 15:22:50.418  INFO 7480 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-10 15:22:50.423  INFO 7480 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-10 15:22:50.430  WARN 7480 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType java.util.List<java.lang.String>
+2023-06-10 15:22:50.443  INFO 7480 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.644 seconds (JVM running for 1552.963)
+2023-06-10 15:22:50.444  INFO 7480 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
