@@ -69,6 +69,29 @@ public class NewsController {
         }
         return 0;
     }
+    public static int convertStringToTimestamp(String dateString, String time) {
+        try {
+            String dateTimeString = dateString + " " + time;
+
+            // 定义日期格式
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+            // 解析字符串为日期对象
+            Date date = sdf.parse(dateTimeString);
+
+            // 获取时间戳（以秒为单位）
+            long timestamp = date.getTime() / 1000;
+
+            // 将时间戳转换为int类型
+            int timestampInt = (int) timestamp;
+
+            return timestampInt;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return 0; // 如果转换失败，返回0或其他默认值
+    }
 
     //推荐新闻
     @GetMapping("/Recommend")
@@ -77,15 +100,16 @@ public class NewsController {
 
         int intdate = convertDateStringToInt(date);
 
+
         // 查询用户当天点击过的所有新闻
-        QueryWrapper<Click> clickWrapper = new QueryWrapper<>();
+        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
         clickWrapper.eq("UserId", userId)
-                .eq("ClickTime", intdate);
-        List<Click> clickList = clickMapper.selectList(clickWrapper);
+                .between("ClickTime", intstartdate,  intenddate)
+        List<ClicksInt> clickList = clicksIntMapper.selectList(clickWrapper);
 
         // 统计每个Category的点击量
         Map<String, Integer> categoryCounts = new HashMap<>();
-        for (Click click : clickList) {
+        for (ClicksInt click : clickList) {
             String category = click.getClicknews();
             categoryCounts.put(category, categoryCounts.getOrDefault(category, 0) + 1);
         }
@@ -128,13 +152,13 @@ public class NewsController {
         int intdate = convertDateStringToInt(date);
 
         // 查询当天用户点击过的新闻ID
-        QueryWrapper<Click> clickWrapper = new QueryWrapper<>();
+        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
         clickWrapper.in("UserId", userIds)
                 .eq("ClickTime", intdate);
-        List<Click> clickList = clickMapper.selectList(clickWrapper);
+        List<ClicksInt> clickList = clicksIntMapper.selectList(clickWrapper);
 
         List<String> newsIds = new ArrayList<>();
-        for (Click click : clickList) {
+        for (ClicksInt click : clickList) {
             newsIds.add(click.getClicknews());
         }
 
