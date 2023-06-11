@@ -1,3 +1,186 @@
  Consume Time：82 ms 2023-06-11 11:23:01
  Execute SQL：SELECT dailyclickid,day,category,clicknews,num FROM DailyClick WHERE (ClickNews = 'N110541' AND Day BETWEEN 20190614 AND 20190617)
 
+ Consume Time：13 ms 2023-06-11 14:38:19
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560528000 AND 1560614399)
+
+ Consume Time：15 ms 2023-06-11 14:38:19
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (Category = 'news') LIMIT 5
+
+ Consume Time：1591 ms 2023-06-11 14:38:30
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = 'sports' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：12 ms 2023-06-11 14:38:34
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = 'N100224' AND ClickTime BETWEEN 1560528000 AND 1561305599) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：12 ms 2023-06-11 14:38:42
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560787199) GROUP BY Category
+
+ Consume Time：13 ms 2023-06-11 14:38:42
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560787199) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：1661 ms 2023-06-11 14:38:50
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = 'sports' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：13 ms 2023-06-11 14:51:48
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = 'N100224' AND ClickTime BETWEEN 1560528000 AND 1561305599) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：1584 ms 2023-06-11 14:51:59
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = 'sports' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：13 ms 2023-06-11 15:29:30
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：15 ms 2023-06-11 15:29:30
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：14 ms 2023-06-11 15:29:32
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560528000 AND 1560614399)
+
+ Consume Time：14 ms 2023-06-11 15:29:32
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (Category = 'news') LIMIT 5
+
+ Consume Time：13 ms 2023-06-11 15:29:35
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = 'N100224' AND ClickTime BETWEEN 1560528000 AND 1561305599) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：1581 ms 2023-06-11 15:29:38
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = 'sports' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：15 ms 2023-06-11 15:29:40
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560787199) GROUP BY Category
+
+ Consume Time：14 ms 2023-06-11 15:29:40
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560787199) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：2451 ms 2023-06-11 15:56:13
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?)
+
+ Consume Time：15 ms 2023-06-11 15:56:13
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560528000 AND 1560614399)
+
+ Consume Time：17 ms 2023-06-11 15:56:13
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (Category = 'news') LIMIT 5
+
+ Consume Time：19205 ms 2023-06-11 15:56:29
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560528000 AND 1560614399)
+
+ Consume Time：1578 ms 2023-06-11 15:56:55
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = 'sports' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：15 ms 2023-06-11 15:56:58
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560787199) GROUP BY Category
+
+ Consume Time：15 ms 2023-06-11 15:56:58
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560787199) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：18 ms 2023-06-11 15:57:04
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY Category
+
+ Consume Time：16 ms 2023-06-11 15:57:04
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：16 ms 2023-06-11 15:57:11
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560959999) GROUP BY Category
+
+ Consume Time：17 ms 2023-06-11 15:57:11
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560959999) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：28 ms 2023-06-11 15:57:18
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561910399) GROUP BY Category
+
+ Consume Time：16 ms 2023-06-11 15:57:18
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561910399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：17 ms 2023-06-11 15:57:26
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY Category
+
+ Consume Time：17 ms 2023-06-11 15:57:26
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：18 ms 2023-06-11 15:57:38
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY Category
+
+ Consume Time：16 ms 2023-06-11 15:57:38
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：17 ms 2023-06-11 15:57:52
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = 'N100224' AND ClickTime BETWEEN 1560528000 AND 1561305599) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：1705 ms 2023-06-11 15:57:56
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = 'sports' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：15 ms 2023-06-11 16:01:01
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY Category
+
+ Consume Time：16 ms 2023-06-11 16:01:01
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：15 ms 2023-06-11 16:01:10
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：17 ms 2023-06-11 16:01:10
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：15 ms 2023-06-11 16:01:16
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560528000 AND 1560614399)
+
+ Consume Time：16 ms 2023-06-11 16:01:16
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (Category = 'news') LIMIT 5
+
+ Consume Time：15 ms 2023-06-11 16:01:23
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：30 ms 2023-06-11 16:01:23
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND Category = 'sports' AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：15 ms 2023-06-11 16:01:30
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：22 ms 2023-06-11 16:01:30
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND Category = 'news' AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：15 ms 2023-06-11 16:01:55
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：21 ms 2023-06-11 16:01:55
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND Category = 'finance' AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：15 ms 2023-06-11 16:02:08
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：16 ms 2023-06-11 16:02:08
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：16 ms 2023-06-11 16:02:11
+ Execute SQL：SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1560527999)
+
+ Consume Time：16 ms 2023-06-11 16:02:11
+ Execute SQL：SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN ('N95202','N84319','N43563','N78688','N94858','N60541','N109049','N98578','N34661','N60152','N14869','N85195','N112559','N97393','N91626','N108279') AND Category = 'finance' AND LENGTH(News_Body) < 5000) LIMIT 5
+
+ Consume Time：14 ms 2023-06-11 16:14:19
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY Category
+
+ Consume Time：13 ms 2023-06-11 16:14:19
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+
+ Consume Time：14 ms 2023-06-11 16:14:22
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(Day)) AS clickDate, ClickNum AS clickCount FROM Daily WHERE (Category = 'sports' AND Day BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(Day)) ORDER BY DATE(FROM_UNIXTIME(Day)) ASC
+
+ Consume Time：12 ms 2023-06-11 16:14:46
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(Day)) AS clickDate, ClickNum AS clickCount FROM Daily WHERE (Category = 'sports' AND Day BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(Day)) ORDER BY DATE(FROM_UNIXTIME(Day)) ASC
+
+ Consume Time：14 ms 2023-06-11 16:15:43
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(Day)) AS clickDate, ClickNum AS clickCount FROM Daily WHERE (Category = 'sports' AND Day BETWEEN 1560441600 AND 1560787199) ORDER BY DATE(FROM_UNIXTIME(Day)) ASC
+
+ Consume Time：12 ms 2023-06-11 16:15:49
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(Day)) AS clickDate, ClickNum AS clickCount FROM Daily WHERE (Category = 'sports' AND Day BETWEEN 1560441600 AND 1561046399) ORDER BY DATE(FROM_UNIXTIME(Day)) ASC
+
+ Consume Time：15 ms 2023-06-11 16:15:58
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(Day)) AS clickDate, ClickNum AS clickCount FROM Daily WHERE (Category = 'news' AND Day BETWEEN 1560441600 AND 1561046399) ORDER BY DATE(FROM_UNIXTIME(Day)) ASC
+
+ Consume Time：15 ms 2023-06-11 16:16:03
+ Execute SQL：SELECT Category FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY Category
+
+ Consume Time：13 ms 2023-06-11 16:16:03
+ Execute SQL：SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = 'U146053' AND ClickTime BETWEEN 1560441600 AND 1561046399) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC
+

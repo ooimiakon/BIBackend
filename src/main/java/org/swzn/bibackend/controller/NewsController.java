@@ -7,14 +7,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.swzn.bibackend.entity.Click;
-import org.swzn.bibackend.entity.ClicksInt;
-import org.swzn.bibackend.entity.Dailyclick;
-import org.swzn.bibackend.entity.News;
-import org.swzn.bibackend.mapper.ClickMapper;
-import org.swzn.bibackend.mapper.ClicksIntMapper;
-import org.swzn.bibackend.mapper.DailyclickMapper;
-import org.swzn.bibackend.mapper.NewsMapper;
+import org.swzn.bibackend.entity.*;
+import org.swzn.bibackend.mapper.*;
 import org.swzn.bibackend.service.ClickService;
 import org.swzn.bibackend.service.NewsService;
 import org.swzn.bibackend.utils.Result;
@@ -48,6 +42,8 @@ public class NewsController {
     private ClicksIntMapper clicksIntMapper;
     @Resource
     private DailyclickMapper dailyclickMapper;
+    @Resource
+    private DailyMapper dailyMapper;
 
     @GetMapping("/test")
     public String test(){
@@ -422,14 +418,14 @@ public static List<String> getDateRange(String startDate, String endDate, String
 
         // 默认起始日期为该新闻类别最早被点击的日期
         if (startDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("Category", category)
-                    .orderByAsc("ClickTime")
-                    .select("ClickTime")
+            QueryWrapper<Daily> dailyWrapper = new QueryWrapper<>();
+            dailyWrapper.eq("Category", category)
+                    .orderByAsc("Day")
+                    .select("Day")
                     .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
+            Daily click = dailyMapper.selectOne(dailyWrapper);
             if (click != null) {
-                intstartdate = click.getClicktime();
+                intstartdate = click.getDay();
             }
             else{
                 return result;
@@ -441,16 +437,16 @@ public static List<String> getDateRange(String startDate, String endDate, String
 
         // 默认结束日期为该新闻类别最后被点击的日期
         if (endDate == null) {
-            QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-            clickWrapper.eq("Category", category)
-                    .orderByDesc("ClickTime")
-                    .select("ClickTime")
+            QueryWrapper<Daily> dailyWrapper = new QueryWrapper<>();
+            dailyWrapper.eq("Category", category)
+                    .orderByDesc("Day")
+                    .select("Day")
                     .last("LIMIT 1");
-            ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
+            Daily click = dailyMapper.selectOne(dailyWrapper);
             if (click != null) {
-                intenddate = click.getClicktime();
+                intenddate = click.getDay();
             }
-            else {
+            else{
                 return result;
             }
         }
@@ -459,13 +455,12 @@ public static List<String> getDateRange(String startDate, String endDate, String
         }
 
         // 查询日期范围内该类别新闻每一天的总点击量
-        QueryWrapper<ClicksInt> clickWrapper = new QueryWrapper<>();
-        clickWrapper.eq("Category", category)
-                .between("ClickTime", intstartdate, intenddate)
-                .groupBy("DATE(FROM_UNIXTIME(ClickTime))")
-                .orderByAsc("DATE(FROM_UNIXTIME(ClickTime))")
-                .select("DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount");
-        List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(clickWrapper);
+        QueryWrapper<Daily> dailyWrapper = new QueryWrapper<>();
+        dailyWrapper.eq("Category", category)
+                .between("Day", intstartdate, intenddate)
+                .orderByAsc("DATE(FROM_UNIXTIME(Day))")
+                .select("DATE(FROM_UNIXTIME(Day)) AS clickDate, ClickNum AS clickCount");
+        List<Map<String, Object>> clickCountList = dailyMapper.selectMaps(dailyWrapper);
 
         // 封装结果
         List<Map<String, Object>> clickData = new ArrayList<>();
