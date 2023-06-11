@@ -7437,3 +7437,618 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: FUNCTION BusinessInte
 2023-06-11 02:14:21.281 DEBUG 8152 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 0
 2023-06-11 02:14:21.362  INFO 8152 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
 2023-06-11 02:14:21.365  INFO 8152 --- [SpringApplicationShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-11 02:14:44.838  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 47228 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 02:14:44.839  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 02:14:44.885  INFO 47228 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-11 02:14:44.886  INFO 47228 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-11 02:14:45.917  INFO 47228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 02:14:45.928  INFO 47228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 02:14:45.928  INFO 47228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 02:14:46.003  INFO 47228 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 02:14:46.004  INFO 47228 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1118 ms
+2023-06-11 02:14:46.084  INFO 47228 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 02:14:46.146  INFO 47228 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-11 02:14:46.351  WARN 47228 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 02:14:46.720  INFO 47228 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 02:14:46.820  INFO 47228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 02:14:46.992  INFO 47228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 02:14:46.994  INFO 47228 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 02:14:47.003  INFO 47228 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 02:14:47.033  INFO 47228 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 02:14:47.119  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.63 seconds (JVM running for 3.442)
+2023-06-11 02:14:54.011  INFO 47228 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 02:14:54.011  INFO 47228 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 02:14:54.013  INFO 47228 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-06-11 02:15:01.461 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 02:15:01.479 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 02:15:01.503 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 02:15:01.510 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 02:15:01.511 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 02:15:01.533 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 10:47:32.695 DEBUG 47228 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 10:47:32.696 DEBUG 47228 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 10:47:33.627 DEBUG 47228 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 10:48:10.181 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 10:48:10.182 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 10:48:10.197 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 10:48:58.886 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 10:48:58.886 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100171(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 10:48:58.899 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 0
+2023-06-11 10:49:04.240 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 10:49:04.240 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100171(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 10:49:04.253 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 0
+2023-06-11 10:49:39.558 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 10:49:39.558 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 10:49:39.572 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 11:33:32.723 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:33:32.729 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:33:32.774 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:33:32.776 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:33:32.776 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:33:32.789 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:33:32.792 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:33:32.792 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560470841(Integer), 1561084780(Integer)
+2023-06-11 11:33:32.820 DEBUG 47228 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 11:34:18.103 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:34:18.103 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:34:18.117 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:34:18.118 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:34:18.119 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:34:18.132 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:34:18.134 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:34:18.134 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560470841(Integer), 1561084780(Integer)
+2023-06-11 11:34:18.149 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 11:35:47.950 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:35:47.951 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:35:47.965 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:35:47.968 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:35:47.969 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:35:47.983 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:35:47.985 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:35:47.986 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560470841(Integer), 1561084780(Integer)
+2023-06-11 11:35:48.000 DEBUG 47228 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 11:36:07.134 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:36:07.134 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100564(String)
+2023-06-11 11:36:07.149 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:36:07.151 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:36:07.151 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100564(String)
+2023-06-11 11:36:07.163 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:36:07.167 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:36:07.168 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560449605(Integer), 1561670557(Integer)
+2023-06-11 11:36:07.197 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 14
+2023-06-11 11:38:22.844 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:38:22.844 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100564(String)
+2023-06-11 11:38:22.860 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:38:22.861 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:38:22.861 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100564(String)
+2023-06-11 11:38:22.875 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:38:22.877 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:38:22.878 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560449605(Integer), 1561670557(Integer)
+2023-06-11 11:38:22.892 DEBUG 47228 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 14
+2023-06-11 11:38:47.910 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:38:47.911 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100564(String)
+2023-06-11 11:38:47.925 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:38:47.925 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:38:47.926 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100564(String)
+2023-06-11 11:38:47.940 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:38:47.941 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:38:47.942 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560449605(Integer), 1561670557(Integer)
+2023-06-11 11:38:47.956 DEBUG 47228 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 14
+2023-06-11 11:40:04.796 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime ASC LIMIT 1 
+2023-06-11 11:40:04.796 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:40:04.808 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:40:04.810 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==>  Preparing: SELECT ClickTime FROM Clicks_Int WHERE (ClickNews = ?) ORDER BY ClickTime DESC LIMIT 1 
+2023-06-11 11:40:04.811 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : ==> Parameters: N100224(String)
+2023-06-11 11:40:04.825 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectOne   : <==      Total: 1
+2023-06-11 11:40:04.826 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:40:04.827 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560470841(Integer), 1561084780(Integer)
+2023-06-11 11:40:04.840 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 11:40:30.089 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:40:30.089 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 11:40:30.102 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 11:42:59.439 DEBUG 47228 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:42:59.440 DEBUG 47228 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 11:42:59.458 DEBUG 47228 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 11:45:56.585 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:45:56.586 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 11:45:56.600 DEBUG 47228 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 11:46:15.344 DEBUG 47228 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:46:15.345 DEBUG 47228 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 11:46:15.358 DEBUG 47228 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 11:47:00.483 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 11:47:00.484 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100564(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 11:47:00.497 DEBUG 47228 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 11:58:08.274  INFO 47228 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-11 11:58:08.444  INFO 47228 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-11 11:58:08.452  INFO 47228 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-11 11:58:08.503  INFO 47228 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-11 11:58:08.508  INFO 47228 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-11 11:58:08.660  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 47228 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 11:58:08.660  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 11:58:09.014  INFO 47228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 11:58:09.016  INFO 47228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 11:58:09.016  INFO 47228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 11:58:09.039  INFO 47228 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 11:58:09.039  INFO 47228 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 376 ms
+2023-06-11 11:58:09.074  INFO 47228 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 11:58:09.084  INFO 47228 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-11 11:58:09.157  WARN 47228 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 11:58:09.366  INFO 47228 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 11:58:09.408  INFO 47228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 11:58:09.480  INFO 47228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 11:58:09.481  INFO 47228 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 11:58:09.482  INFO 47228 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 11:58:09.485  INFO 47228 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 11:58:09.507  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.88 seconds (JVM running for 35005.831)
+2023-06-11 11:58:09.510  INFO 47228 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-11 11:58:36.666  INFO 47228 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-11 11:58:36.700  INFO 47228 --- [Thread-8] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-11 11:58:36.706  INFO 47228 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-06-11 11:58:36.706  INFO 47228 --- [Thread-8] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-06-11 11:58:36.784  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 47228 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 11:58:36.785  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 11:58:37.057  INFO 47228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 11:58:37.057  INFO 47228 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 11:58:37.058  INFO 47228 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 11:58:37.086  INFO 47228 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 11:58:37.086  INFO 47228 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 299 ms
+2023-06-11 11:58:37.102  INFO 47228 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 11:58:37.109  INFO 47228 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-06-11 11:58:37.244  WARN 47228 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 11:58:37.403  INFO 47228 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 11:58:37.442  INFO 47228 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 11:58:37.497  INFO 47228 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 11:58:37.498  INFO 47228 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 11:58:37.498  INFO 47228 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 11:58:37.501  INFO 47228 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 11:58:37.523  INFO 47228 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.761 seconds (JVM running for 35033.847)
+2023-06-11 11:58:37.524  INFO 47228 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-11 12:00:43.258  INFO 37552 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 37552 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 12:00:43.260  INFO 37552 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 12:00:43.309  INFO 37552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-11 12:00:43.310  INFO 37552 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-11 12:00:44.319  INFO 37552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 12:00:44.327  INFO 37552 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 12:00:44.327  INFO 37552 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 12:00:44.399  INFO 37552 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 12:00:44.399  INFO 37552 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1088 ms
+2023-06-11 12:00:44.484  INFO 37552 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 12:00:44.553  INFO 37552 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-11 12:00:44.851  WARN 37552 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 12:00:45.240  INFO 37552 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 12:00:45.333  INFO 37552 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 12:00:45.490  INFO 37552 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 12:00:45.491  INFO 37552 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 12:00:45.501  INFO 37552 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 12:00:45.529  INFO 37552 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 12:00:45.623  INFO 37552 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.732 seconds (JVM running for 3.693)
+2023-06-11 12:00:53.934  INFO 37552 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 12:00:53.935  INFO 37552 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 12:00:53.936  INFO 37552 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-11 12:01:10.065 DEBUG 37552 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:01:10.088 DEBUG 37552 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100171(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 12:01:10.120 DEBUG 37552 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 1
+2023-06-11 12:01:32.822 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:01:32.822 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 12:01:32.837 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 4
+2023-06-11 12:02:13.704 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:02:13.705 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560441600(Integer), 1561910399(Integer)
+2023-06-11 12:02:13.722 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 12:02:21.089 DEBUG 37552 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:02:21.089 DEBUG 37552 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561910399(Integer)
+2023-06-11 12:02:21.111 DEBUG 37552 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 12:02:32.976 DEBUG 37552 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:02:32.978 DEBUG 37552 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1562169599(Integer)
+2023-06-11 12:02:32.994 DEBUG 37552 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 12:02:41.221 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:02:41.223 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 12:02:41.241 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 12:03:41.734 DEBUG 37552 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:03:41.735 DEBUG 37552 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 12:03:41.748 DEBUG 37552 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 12:03:46.889 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 12:03:46.891 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 12:03:46.931 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:04:17.699 DEBUG 37552 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:04:17.701 DEBUG 37552 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:04:17.735 DEBUG 37552 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:04:55.026 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:04:55.027 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:04:55.045 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:05:37.510 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:05:37.511 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:05:37.524 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:06:28.354 DEBUG 37552 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:06:28.355 DEBUG 37552 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:06:28.368 DEBUG 37552 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:07:30.975 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:07:30.977 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:07:30.998 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:09:58.654 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:09:58.655 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561305599(Integer)
+2023-06-11 13:10:01.050 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 10
+2023-06-11 13:10:08.943 DEBUG 37552 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:10:08.943 DEBUG 37552 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:10:10.517 DEBUG 37552 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:12:22.796 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:12:22.798 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: null, 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:12:22.826 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 0
+2023-06-11 13:13:11.133 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:13:11.133 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:13:12.781 DEBUG 37552 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:13:29.507 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:13:29.508 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: news(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:13:33.731 DEBUG 37552 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:13:33.732 DEBUG 37552 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: news(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:13:36.943 DEBUG 37552 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:13:42.185 DEBUG 37552 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:15:27.705 DEBUG 37552 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:15:27.706 DEBUG 37552 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:15:27.739 DEBUG 37552 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:15:31.849 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:15:31.850 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:15:33.686 DEBUG 37552 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:15:56.298 DEBUG 37552 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:15:56.299 DEBUG 37552 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:15:57.941 DEBUG 37552 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:16:23.202 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:16:23.202 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:16:23.221 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:16:23.222 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:16:23.222 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:16:23.239 DEBUG 37552 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:19:05.182  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 33728 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:19:05.184  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:19:05.229  INFO 33728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-11 13:19:05.229  INFO 33728 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-11 13:19:06.345  INFO 33728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:19:06.355  INFO 33728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:19:06.355  INFO 33728 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:19:06.438  INFO 33728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:19:06.438  INFO 33728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1208 ms
+2023-06-11 13:19:06.529  INFO 33728 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:19:06.612  INFO 33728 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-11 13:19:06.849  WARN 33728 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:19:07.219  INFO 33728 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:19:07.311  INFO 33728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:19:07.470  INFO 33728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:19:07.471  INFO 33728 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:19:07.480  INFO 33728 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:19:07.505  INFO 33728 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:19:07.595  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.786 seconds (JVM running for 3.655)
+2023-06-11 13:19:11.528  INFO 33728 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 13:19:11.529  INFO 33728 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 13:19:11.530  INFO 33728 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-11 13:19:11.975  INFO 33728 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-11 13:19:12.026  INFO 33728 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-11 13:19:12.028  INFO 33728 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-11 13:19:12.043  INFO 33728 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-11 13:19:12.044  INFO 33728 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-11 13:19:12.128  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 33728 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:19:12.129  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:19:12.416  INFO 33728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:19:12.417  INFO 33728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:19:12.417  INFO 33728 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:19:12.438  INFO 33728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:19:12.438  INFO 33728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 307 ms
+2023-06-11 13:19:12.459  INFO 33728 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:19:12.467  INFO 33728 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-11 13:19:12.569  WARN 33728 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:19:12.751  INFO 33728 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:19:12.780  INFO 33728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:19:12.836  INFO 33728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:19:12.837  INFO 33728 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:19:12.838  INFO 33728 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:19:12.842  INFO 33728 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:19:12.868  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 0.773 seconds (JVM running for 8.928)
+2023-06-11 13:19:12.870  INFO 33728 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-11 13:19:12.908  INFO 33728 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 13:19:12.908  INFO 33728 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 13:19:12.910  INFO 33728 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-11 13:20:12.309 DEBUG 33728 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:20:12.334 DEBUG 33728 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:20:12.358 DEBUG 33728 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:20:12.363 DEBUG 33728 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:20:12.363 DEBUG 33728 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:20:12.391 DEBUG 33728 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:21:47.685  INFO 33728 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-11 13:21:47.741  INFO 33728 --- [Thread-7] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-11 13:21:47.742  INFO 33728 --- [Thread-7] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-11 13:21:47.747  INFO 33728 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closing ...
+2023-06-11 13:21:47.750  INFO 33728 --- [Thread-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} closed
+2023-06-11 13:21:47.825  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 33728 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:21:47.825  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:21:48.238  INFO 33728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:21:48.239  INFO 33728 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:21:48.239  INFO 33728 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:21:48.271  INFO 33728 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:21:48.271  INFO 33728 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 443 ms
+2023-06-11 13:21:48.295  INFO 33728 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:21:48.308  INFO 33728 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-3} inited
+2023-06-11 13:21:48.399  WARN 33728 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:21:48.651  INFO 33728 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:21:48.706  INFO 33728 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:21:48.799  INFO 33728 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:21:48.800  INFO 33728 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:21:48.801  INFO 33728 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:21:48.805  INFO 33728 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:21:48.831  INFO 33728 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.039 seconds (JVM running for 164.892)
+2023-06-11 13:21:48.832  INFO 33728 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-11 13:25:04.017  INFO 43096 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 43096 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:25:04.019  INFO 43096 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:25:04.069  INFO 43096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-11 13:25:04.069  INFO 43096 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-11 13:25:05.134  INFO 43096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:25:05.141  INFO 43096 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:25:05.141  INFO 43096 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:25:05.221  INFO 43096 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:25:05.222  INFO 43096 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1152 ms
+2023-06-11 13:25:05.306  INFO 43096 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:25:05.360  INFO 43096 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-11 13:25:05.569  WARN 43096 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:25:05.931  INFO 43096 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:25:06.026  INFO 43096 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:25:06.187  INFO 43096 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:25:06.188  INFO 43096 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:25:06.196  INFO 43096 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:25:06.225  INFO 43096 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:25:06.317  INFO 43096 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.632 seconds (JVM running for 3.408)
+2023-06-11 13:25:22.957  INFO 43096 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 13:25:22.957  INFO 43096 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 13:25:22.958  INFO 43096 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-11 13:25:51.320 DEBUG 43096 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:25:51.340 DEBUG 43096 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:25:51.364 DEBUG 43096 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:25:51.367 DEBUG 43096 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:25:51.368 DEBUG 43096 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:25:51.390 DEBUG 43096 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:26:34.577  INFO 45320 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 45320 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:26:34.579  INFO 45320 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:26:34.626  INFO 45320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-11 13:26:34.626  INFO 45320 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-11 13:26:35.631  INFO 45320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:26:35.639  INFO 45320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:26:35.640  INFO 45320 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:26:35.722  INFO 45320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:26:35.723  INFO 45320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
+2023-06-11 13:26:35.800  INFO 45320 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:26:35.855  INFO 45320 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-11 13:26:36.059  WARN 45320 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:26:36.413  INFO 45320 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:26:36.508  INFO 45320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:26:36.662  INFO 45320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:26:36.663  INFO 45320 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:26:36.671  INFO 45320 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:26:36.698  INFO 45320 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:26:36.784  INFO 45320 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 2.538 seconds (JVM running for 3.34)
+2023-06-11 13:26:48.258  INFO 45320 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 13:26:48.258  INFO 45320 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 13:26:48.259  INFO 45320 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-11 13:26:58.070 DEBUG 45320 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:26:58.088 DEBUG 45320 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:26:58.118 DEBUG 45320 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:26:58.121 DEBUG 45320 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:26:58.121 DEBUG 45320 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:26:58.146 DEBUG 45320 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:31:39.259  INFO 45320 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-06-11 13:31:39.325  INFO 45320 --- [Thread-4] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-06-11 13:31:39.326  INFO 45320 --- [Thread-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-06-11 13:31:39.338  INFO 45320 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2023-06-11 13:31:39.340  INFO 45320 --- [Thread-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2023-06-11 13:31:39.418  INFO 45320 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 45320 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:31:39.419  INFO 45320 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:31:39.835  INFO 45320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:31:39.837  INFO 45320 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:31:39.837  INFO 45320 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:31:39.875  INFO 45320 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:31:39.875  INFO 45320 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 451 ms
+2023-06-11 13:31:39.910  INFO 45320 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:31:39.927  INFO 45320 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2023-06-11 13:31:40.035  WARN 45320 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:31:40.305  INFO 45320 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:31:40.360  INFO 45320 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:31:40.454  INFO 45320 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:31:40.455  INFO 45320 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:31:40.455  INFO 45320 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:31:40.461  INFO 45320 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:31:40.497  INFO 45320 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 1.115 seconds (JVM running for 307.053)
+2023-06-11 13:31:40.500  INFO 45320 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-06-11 13:35:58.317  INFO 15148 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Starting BiBackendApplication using Java 19 on LAPTOP-9SBR508P with PID 15148 (E:\PROGRAM\Java\BIBackend\target\classes started by HDM in E:\PROGRAM\Java\BIBackend)
+2023-06-11 13:35:58.319  INFO 15148 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : No active profile set, falling back to 1 default profile: "default"
+2023-06-11 13:35:58.441  INFO 15148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-06-11 13:35:58.442  INFO 15148 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-06-11 13:36:00.849  INFO 15148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 3002 (http)
+2023-06-11 13:36:00.860  INFO 15148 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-06-11 13:36:00.860  INFO 15148 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.69]
+2023-06-11 13:36:00.960  INFO 15148 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-06-11 13:36:00.960  INFO 15148 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2518 ms
+2023-06-11 13:36:01.048  INFO 15148 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2023-06-11 13:36:01.107  INFO 15148 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2023-06-11 13:36:01.316  WARN 15148 --- [restartedMain] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: org.swzn.bibackend.entity.News.
+2023-06-11 13:36:01.701  INFO 15148 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-06-11 13:36:01.794  INFO 15148 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-06-11 13:36:01.948  INFO 15148 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 3002 (http) with context path ''
+2023-06-11 13:36:01.950  INFO 15148 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-06-11 13:36:01.958  INFO 15148 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-06-11 13:36:01.985  INFO 15148 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-06-11 13:36:02.077  INFO 15148 --- [restartedMain] org.swzn.bibackend.BiBackendApplication  : Started BiBackendApplication in 4.467 seconds (JVM running for 5.51)
+2023-06-11 13:36:12.274  INFO 15148 --- [http-nio-3002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-11 13:36:12.275  INFO 15148 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-06-11 13:36:12.276  INFO 15148 --- [http-nio-3002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-06-11 13:36:23.582 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:36:23.601 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:36:23.624 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:36:23.628 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:36:23.629 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:36:23.655 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:36:45.476 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:36:45.477 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560614399(Integer)
+2023-06-11 13:36:45.490 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 12
+2023-06-11 13:36:45.491 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:36:45.492 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560614399(Integer)
+2023-06-11 13:36:45.506 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 19
+2023-06-11 13:52:52.161 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:52:52.161 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:52:52.174 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:52:52.176 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:52:52.176 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:52:52.193 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:53:20.575 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:53:20.575 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:53:20.588 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:53:20.589 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:53:20.590 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:53:20.606 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:53:54.513 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:53:54.515 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:53:54.529 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:53:54.531 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:53:54.531 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:53:54.550 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:55:06.999 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:55:07.000 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:55:07.014 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:55:07.016 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:55:07.016 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:55:07.036 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:56:43.103 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:56:43.103 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:56:43.117 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:56:43.118 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:56:43.118 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:56:43.134 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:58:05.431 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:58:05.432 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:58:05.445 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:58:05.447 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:58:05.448 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:58:05.464 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 13:58:27.734 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectList  : ==>  Preparing: SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) 
+2023-06-11 13:58:27.735 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectList  : ==> Parameters: U146053(String), 1560441600(Integer), 1560527999(Integer)
+2023-06-11 13:58:27.752 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectList  : <==      Total: 16
+2023-06-11 13:58:27.754 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.NewsMapper.selectList       : ==>  Preparing: SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AND LENGTH(News_Body) < 5000) LIMIT 5 
+2023-06-11 13:58:27.755 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.NewsMapper.selectList       : ==> Parameters: N95202(String), N84319(String), N43563(String), N78688(String), N94858(String), N60541(String), N109049(String), N98578(String), N34661(String), N60152(String), N14869(String), N85195(String), N112559(String), N97393(String), N91626(String), N108279(String)
+2023-06-11 13:58:27.792 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.NewsMapper.selectList       : <==      Total: 5
+2023-06-11 13:58:32.145 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectList  : ==>  Preparing: SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) 
+2023-06-11 13:58:32.145 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectList  : ==> Parameters: U146053(String), 1560528000(Integer), 1560614399(Integer)
+2023-06-11 13:58:32.160 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectList  : <==      Total: 42
+2023-06-11 13:58:32.162 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.NewsMapper.selectList       : ==>  Preparing: SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (Category = ?) LIMIT 5 
+2023-06-11 13:58:32.162 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.NewsMapper.selectList       : ==> Parameters: news(String)
+2023-06-11 13:58:32.183 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.NewsMapper.selectList       : <==      Total: 5
+2023-06-11 13:58:37.627 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:58:37.628 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 13:58:37.643 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 13:58:41.917 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:58:41.917 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 13:58:43.541 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 13:58:51.385 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 13:58:51.386 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:58:51.399 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 13:58:51.403 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 13:58:51.404 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 13:58:51.418 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:09:42.018 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:09:42.019 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:09:42.032 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:09:42.035 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:09:42.036 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:09:42.049 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:11:59.927 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:11:59.928 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:11:59.942 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:11:59.943 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:11:59.943 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:11:59.958 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:13:40.523 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:13:40.524 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:13:40.537 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:13:40.538 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:13:40.538 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:13:40.553 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:14:17.473 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:14:17.473 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:14:17.486 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:14:17.488 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:14:17.488 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:14:17.503 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:17:06.123 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:17:06.123 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:17:06.138 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:17:06.139 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:17:06.140 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:17:06.155 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:17:48.307 DEBUG 15148 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:17:48.308 DEBUG 15148 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 14:17:49.902 DEBUG 15148 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 14:18:19.878 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:18:19.879 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 14:18:21.536 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 14:18:58.614 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:18:58.615 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:18:58.627 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:18:58.628 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:18:58.629 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:18:58.643 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:20:25.711 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:20:25.712 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 14:20:25.726 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 14:20:37.762 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:20:37.763 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 14:20:37.776 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 14:20:55.349 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectList  : ==>  Preparing: SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) 
+2023-06-11 14:20:55.350 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectList  : ==> Parameters: U146053(String), 1560528000(Integer), 1560614399(Integer)
+2023-06-11 14:20:55.377 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectList  : <==      Total: 42
+2023-06-11 14:20:55.381 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.NewsMapper.selectList       : ==>  Preparing: SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (Category = ?) LIMIT 5 
+2023-06-11 14:20:55.382 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.NewsMapper.selectList       : ==> Parameters: news(String)
+2023-06-11 14:20:55.417 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.NewsMapper.selectList       : <==      Total: 5
+2023-06-11 14:20:57.742 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectList  : ==>  Preparing: SELECT clickid,clicktime,userid,clicknews,category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) 
+2023-06-11 14:20:57.742 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectList  : ==> Parameters: U146053(String), 1560441600(Integer), 1560527999(Integer)
+2023-06-11 14:20:57.756 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectList  : <==      Total: 16
+2023-06-11 14:20:57.757 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.NewsMapper.selectList       : ==>  Preparing: SELECT news_id,category,topic,headline,news_body,cutnum FROM News WHERE (News_ID IN (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) AND LENGTH(News_Body) < 5000) LIMIT 5 
+2023-06-11 14:20:57.758 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.NewsMapper.selectList       : ==> Parameters: N95202(String), N84319(String), N43563(String), N78688(String), N94858(String), N60541(String), N109049(String), N98578(String), N34661(String), N60152(String), N14869(String), N85195(String), N112559(String), N97393(String), N91626(String), N108279(String)
+2023-06-11 14:20:57.772 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.NewsMapper.selectList       : <==      Total: 5
+2023-06-11 14:20:59.679 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (ClickNews = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:20:59.679 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: N100224(String), 1560528000(Integer), 1561305599(Integer)
+2023-06-11 14:20:59.693 DEBUG 15148 --- [http-nio-3002-exec-1] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 6
+2023-06-11 14:21:02.922 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:21:02.923 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:21:02.937 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:21:02.939 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:21:02.939 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:21:02.953 DEBUG 15148 --- [http-nio-3002-exec-2] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:21:06.408 DEBUG 15148 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:21:06.410 DEBUG 15148 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 14:21:08.090 DEBUG 15148 --- [http-nio-3002-exec-8] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 14:21:13.274 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:21:13.274 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: news(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 14:21:19.936 DEBUG 15148 --- [http-nio-3002-exec-7] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 14:21:43.872 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:21:43.873 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:21:43.885 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:21:43.887 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:21:43.887 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:21:43.900 DEBUG 15148 --- [http-nio-3002-exec-5] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:22:28.093 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:22:28.094 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:22:28.107 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:22:28.109 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:22:28.109 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:22:28.123 DEBUG 15148 --- [http-nio-3002-exec-9] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39
+2023-06-11 14:22:43.592 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:22:43.592 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U116027(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:22:43.607 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 10
+2023-06-11 14:22:43.609 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:22:43.610 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U116027(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:22:43.624 DEBUG 15148 --- [http-nio-3002-exec-4] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 10
+2023-06-11 14:22:59.994 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:22:59.995 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 14:23:01.738 DEBUG 15148 --- [http-nio-3002-exec-3] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 14:23:09.184 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount FROM Clicks_Int WHERE (Category = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)) ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:23:09.185 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: sports(String), 1560441600(Integer), 1561046399(Integer)
+2023-06-11 14:23:10.818 DEBUG 15148 --- [http-nio-3002-exec-10] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 7
+2023-06-11 14:23:16.597 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==>  Preparing: SELECT Category FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY Category 
+2023-06-11 14:23:16.598 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectObjs  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:23:16.611 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectObjs  : <==      Total: 14
+2023-06-11 14:23:16.612 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==>  Preparing: SELECT DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount FROM Clicks_Int WHERE (UserId = ? AND ClickTime BETWEEN ? AND ?) GROUP BY DATE(FROM_UNIXTIME(ClickTime)), Category ORDER BY DATE(FROM_UNIXTIME(ClickTime)) ASC 
+2023-06-11 14:23:16.613 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : ==> Parameters: U146053(String), 1560441600(Integer), 1560787199(Integer)
+2023-06-11 14:23:16.626 DEBUG 15148 --- [http-nio-3002-exec-6] o.s.b.mapper.ClicksIntMapper.selectMaps  : <==      Total: 39

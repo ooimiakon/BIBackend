@@ -273,7 +273,25 @@ public class NewsController {
 //        result.data.put("list",array);
 //        return result;
 //    }
+public static List<String> getDateRange(String startDate, String endDate, String dateFormat) {
+    List<String> dateRange = new ArrayList<>();
+    try {
+        SimpleDateFormat sdf = new SimpleDateFormat(dateFormat);
+        Calendar startCalendar = Calendar.getInstance();
+        startCalendar.setTime(sdf.parse(startDate));
 
+        Calendar endCalendar = Calendar.getInstance();
+        endCalendar.setTime(sdf.parse(endDate));
+
+        while (!startCalendar.after(endCalendar)) {
+            dateRange.add(sdf.format(startCalendar.getTime()));
+            startCalendar.add(Calendar.DATE, 1);
+        }
+    } catch (ParseException e) {
+        e.printStackTrace();
+    }
+    return dateRange;
+}
 
     //新闻点击量变化
     @GetMapping("/NewsClickCount")
@@ -328,14 +346,39 @@ public class NewsController {
                 .orderByAsc("DATE(FROM_UNIXTIME(ClickTime))")
                 .select("DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, COUNT(*) AS clickCount");
         List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(clickWrapper);
+//
+//        // 封装结果
+//        List<Map<String, Object>> clickData = new ArrayList<>();
+//        for (Map<String, Object> clickCount : clickCountList) {
+//            Map<String, Object> clickInfo = new HashMap<>();
+//            clickInfo.put("date", clickCount.get("clickDate"));
+//            clickInfo.put("clickCount", clickCount.get("clickCount"));
+//            clickData.add(clickInfo);
+//        }
 
-        // 封装结果
+        // 构建日期范围
+        List<String> dateRange = getDateRange(startDate, endDate, "yyyy-MM-dd");
+
+        // 封装结果初始化为0
         List<Map<String, Object>> clickData = new ArrayList<>();
-        for (Map<String, Object> clickCount : clickCountList) {
+        for (String date : dateRange) {
             Map<String, Object> clickInfo = new HashMap<>();
-            clickInfo.put("date", clickCount.get("clickDate"));
-            clickInfo.put("clickCount", clickCount.get("clickCount"));
+            clickInfo.put("date", date);
+            clickInfo.put("clickCount", 0);
             clickData.add(clickInfo);
+        }
+
+        // 更新结果中存在的点击数据
+        for (Map<String, Object> clickCount : clickCountList) {
+            String clickDate = clickCount.get("clickDate").toString();
+            int clickCountValue = Integer.parseInt(clickCount.get("clickCount").toString());
+
+            // 查找对应日期的索引
+            int index = dateRange.indexOf(clickDate);
+            if (index >= 0) {
+                // 更新点击量
+                clickData.get(index).put("clickCount", clickCountValue);
+            }
         }
 
         result.data.put("clicks", clickData);
@@ -527,12 +570,10 @@ public class NewsController {
             ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
             if (click != null) {
                 intstartdate = click.getClicktime();
-            }
-            else{
+            } else {
                 return result;
             }
-        }
-        else {
+        } else {
             intstartdate = convertStringToStartstamp(startDate);
         }
         // 默认结束日期为该用户点击的新闻最后日期
@@ -545,12 +586,10 @@ public class NewsController {
             ClicksInt click = clicksIntMapper.selectOne(clickWrapper);
             if (click != null) {
                 intenddate = click.getClicktime();
-            }
-            else {
+            } else {
                 return result;
             }
-        }
-        else{
+        } else {
             intenddate = convertStringToEndstamp(endDate);
         }
 
@@ -577,15 +616,42 @@ public class NewsController {
                 .select("DATE(FROM_UNIXTIME(ClickTime)) AS clickDate, Category, COUNT(*) as clickCount");
         List<Map<String, Object>> clickCountList = clicksIntMapper.selectMaps(countWrapper);
 
+        // 获取日期范围内的所有日期和新闻类别
+        List<String> dateRange = getDateRange(startDate, endDate, "yyyy-MM-dd");
+
         // 封装结果
         List<Map<String, Object>> clickData = new ArrayList<>();
-        for (Map<String, Object> clickCount : clickCountList) {
-            Map<String, Object> clickInfo = new HashMap<>();
-            clickInfo.put("date", clickCount.get("clickDate"));
-            clickInfo.put("category", clickCount.get("Category"));
-            clickInfo.put("clickCount", clickCount.get("clickCount"));
-            clickData.add(clickInfo);
+
+        for (String date : dateRange) {
+            for (String category : categories) {
+                Map<String, Object> clickInfo = new HashMap<>();
+                clickInfo.put("date", date);
+                clickInfo.put("category", category);
+                clickInfo.put("clickCount", 0); // 默认点击量为0
+
+                // 查找对应的点击量数据
+                for (Map<String, Object> clickCount : clickCountList) {
+                    String clickDate = clickCount.get("clickDate").toString();
+                    String clickCategory = clickCount.get("Category").toString();
+                    int clickCountValue = Integer.parseInt(clickCount.get("clickCount").toString());
+
+                    if (date.equals(clickDate) && category.equals(clickCategory)) {
+                        clickInfo.put("clickCount", clickCountValue); // 更新点击量
+                        break;
+                    }
+                }
+                clickData.add(clickInfo);
+            }
         }
+//        // 封装结果
+//        List<Map<String, Object>> clickData = new ArrayList<>();
+//        for (Map<String, Object> clickCount : clickCountList) {
+//            Map<String, Object> clickInfo = new HashMap<>();
+//            clickInfo.put("date", clickCount.get("clickDate"));
+//            clickInfo.put("category", clickCount.get("Category"));
+//            clickInfo.put("clickCount", clickCount.get("clickCount"));
+//            clickData.add(clickInfo);
+//        }
         result.data.put("clicks", clickData);
         result.data.put("categories", categories);
         return result;
