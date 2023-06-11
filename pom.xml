@@ -92,17 +92,18 @@
             <artifactId>fastjson</artifactId>
             <version>2.0.9</version>
         </dependency>
+
         <!--sql 分析打印-->
 
-<!--        <dependency>-->
+        <dependency>
 
-<!--            <groupId>p6spy</groupId>-->
+            <groupId>p6spy</groupId>
 
-<!--            <artifactId>p6spy</artifactId>-->
+            <artifactId>p6spy</artifactId>
 
-<!--            <version>3.8.2</version>-->
+            <version>3.8.2</version>
 
-<!--        </dependency>-->
+        </dependency>
 <!--        &lt;!&ndash; log4j2 &ndash;&gt;-->
 <!--        <dependency>-->
 <!--            <groupId>org.apache.logging.log4j</groupId>-->
