@@ -31,7 +31,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 @CrossOrigin("*")
-@Slf4j
+//@Slf4j
 @RestController
 @RequestMapping("/news")
 public class NewsController {
